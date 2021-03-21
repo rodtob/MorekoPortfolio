@@ -21,11 +21,6 @@
   background-size: 100%;
 }
 
-.title{
-  color: aliceblue; 
-  font-size: 1rem;
-}
-
 .navBar{
   position: absolute;
   top: 4%;
@@ -48,3 +43,6 @@
   z-index: 3;
 }
 
+.unboton{
+  z-index: 10;
+}

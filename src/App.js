@@ -1,34 +1,46 @@
 import './App.css';
 import {
-  BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
-import Pentagono from './components/Pentagono'
+import {useState, useRef} from 'react';
+import Menu from './components/Menu/Menu'
+import Hamburguesa from './components/Hamburguesa/Hamburguesa'
+import Header from './components/Header/Header';
+import Musica from './components/Musica/Musica'
+
 
 function App() {
+
+  const [open, setOpen] = useState(false);
+  const node = useRef();
+
   return (
-    <div className="App">
+    <div className="App" ref={node}>
+      <nav>
+        <Menu open={open} setOpen={setOpen}/>
+        <Hamburguesa open={open} setOpen={setOpen}/>
+      </nav>
       <section className='main'>
 
-      <nav className='navBar'>
-            <h1 className='title'>MOREKO</h1>
-      </nav>
 
-    <section className='opcion--section'>
-      <li><Link data-text='DJ'>DJ</Link></li>
-      <li ><Link data-text='Mi musica'>Mimusica</Link></li>
-      <li ><Link data-text='Producciones'>Producciones</Link></li>
-      <li ><Link data-text='Sound Design'>SoundDesign</Link></li>
-      <li ><Link data-text='Mezcla'>Mezcla</Link></li> 
-    </section>
-
-      <Pentagono/>
+      <Switch>
 
 
-
+        <Route path="/">
+            <Header open={open}/>
+        </Route>
+        <Route exact path='/music' component={Musica} />
+        <Route exact path='/aboutme' />
+        
+    
+      </Switch>
+  
+      
+      
       </section>
+
+
       
     </div>
   );
