@@ -1,0 +1,86 @@
+@import '../../Theme/_variable.scss';
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+
+.wrapper--works{
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: 300px
+}
+
+.work{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 2vh;
+    min-height: 20vh;
+}
+
+.circle--img{
+    border: 2px solid white;
+    width: 150px;
+    transition: 1s all;
+    cursor: pointer;&:hover{
+        border: 2px dashed rgb(67, 112, 133);
+    }
+}
+
+.text{
+    margin-left: 4%;
+    overflow-wrap: break-word;
+    width: 60%;
+    text-align: center;
+    font-size: .5rem;
+}
+
+.number--index{
+    align-self: flex-start;
+    opacity: 0.6;
+    transition: .2s all;
+    font-size: 4rem; 
+    transition: .4s all;&:hover{
+        color: $secondary-color;;
+    }
+}
+
+.title--proy{
+    font-size: .5rem;
+    transition: .4s all;&:hover{
+        opacity: .7 ;
+    }
+}
+
+.title--year{
+    color: $primary-color;
+    font-family: 'Lato', sans-serif;
+    transition: .4s all;&:hover{
+        color: $secondary-color;; 
+    }
+}
+
+.title--desc{
+    color: $forth-color;
+    font-size: .4rem;
+}
+@media(max-width: 960px){
+    .work{
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 2vh;
+        min-height: 20vh;
+    }
+    .text{
+        text-align: center;
+        margin-top: 2vh;
+        font-size: 1rem;
+    }
+    .wrapper--works{
+        min-height: 75vh;
+    }
+    .number--index{
+        order:-1;
+        align-self: center;
+    }
+}

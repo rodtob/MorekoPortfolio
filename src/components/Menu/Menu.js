@@ -41,6 +41,7 @@ import styled from 'styled-components'
 
     &:hover {
       color: white;
+      text-transform: lowercase;
     }
   }
 `
@@ -54,6 +55,7 @@ const Menu = ({open})=>{
       <li ><Link>+Producciones</Link></li>
       <li ><Link>+Sound Design</Link></li>
       <li ><Link>+Mezcla</Link></li> 
+      <li ><Link to='/'> +home</Link></li> 
   </StyledMenu>
     )
 }
