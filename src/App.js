@@ -10,10 +10,9 @@ import MiMusica from './components/Mimusica/Mimusica'
 function App() {
 
   const [open, setOpen] = useState(false);
-  const node = useRef();
 
   return (
-    <div className="App" ref={node}>
+    <div className="App" >
       <nav>
         <Menu open={open} setOpen={setOpen}/>
         <Hamburguesa open={open} setOpen={setOpen}/>
