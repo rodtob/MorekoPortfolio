@@ -1,13 +1,10 @@
 import './App.css';
-import {
-  Switch,
-  Route,
-} from "react-router-dom";
+import {Switch, Route} from "react-router-dom";
 import {useState, useRef} from 'react';
 import Menu from './components/Menu/Menu'
 import Hamburguesa from './components/Hamburguesa/Hamburguesa'
 import Header from './components/Header/Header';
-import Musica from './components/Musica/Musica'
+import MiMusica from './components/Mimusica/Mimusica'
 
 
 function App() {
@@ -27,11 +24,13 @@ function App() {
       <Switch>
 
 
-        <Route path="/">
+        <Route exact path="/">
             <Header open={open}/>
         </Route>
-        <Route exact path='/music' component={Musica} />
-        <Route exact path='/aboutme' />
+        <Route exact path='/music'>
+          <MiMusica/>
+        </Route>
+        <Route exact path='/dj' component={MiMusica}/>
         
     
       </Switch>
@@ -39,7 +38,6 @@ function App() {
       
       
       </section>
-
 
       
     </div>

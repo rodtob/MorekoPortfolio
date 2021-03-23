@@ -1,12 +1,12 @@
 import React from 'react'
 
-import './Work-style.scss'
+import './Mimusica.scss'
 import original from '../../assets/originalsq.jpg'
 import anestesiados from '../../assets/Anestesiados.jpg'
 import beatz from '../../assets/Tapabeatz.png'
 
 
-const Works = ()=>{
+const Mimusica = ()=>{
 
 
     const theworks =[ {
@@ -61,4 +61,4 @@ const Works = ()=>{
     )
 }
 
-export default Works
+export default Mimusica
