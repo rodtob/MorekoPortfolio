@@ -27,11 +27,11 @@ function App() {
       <Switch>
 
 
-        <Route path="/">
-            <Header open={open}/>
-        </Route>
-        <Route exact path='/music' component={Musica} />
-        <Route exact path='/aboutme' />
+            <Route path="/">
+                <Header open={open}/>
+            </Route>
+            <Route exact path='/music' component={Musica} />
+            <Route exact path='/aboutme' />
         
     
       </Switch>
