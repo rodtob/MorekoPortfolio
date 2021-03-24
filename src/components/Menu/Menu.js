@@ -2,6 +2,8 @@ import {
     Link
   } from "react-router-dom";
 import styled from 'styled-components'
+import {useSelector,useDispatch} from 'react-redux'
+import {menuOpen} from '../../actions'
 
   const StyledMenu = styled.nav`
   display: flex;
@@ -46,16 +48,18 @@ import styled from 'styled-components'
   }
 `
 
-const Menu = ({open})=>{
+const Menu = ()=>{
+  const open = useSelector(state=> state.isOpen)
+  const dispatch = useDispatch()
+  const clickClose = ()=>dispatch(menuOpen())
     return(
-        
  <StyledMenu open={open}>
-      <li><Link>+DJ</Link></li>
-      <li ><Link to='music'>+Mi musica</Link></li>
-      <li ><Link>+Producciones</Link></li>
-      <li ><Link>+Sound Design</Link></li>
-      <li ><Link>+Mezcla</Link></li> 
-      <li ><Link to='/'> +home</Link></li> 
+      <li onClick={clickClose}><Link to='/dj'>+DJ</Link></li>
+      <li onClick={clickClose}><Link to='/music'>+Mi musica</Link></li>
+      <li onClick={clickClose}><Link to='/production'>+Producciones</Link></li>
+      <li onClick={clickClose}><Link to='/sd'>+Sound Design</Link></li>
+      <li onClick={clickClose}><Link to='/mezcla'>+Mezcla</Link></li> 
+      <li onClick={clickClose}><Link to='/'>+home</Link></li> 
   </StyledMenu>
     )
 }

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-
+import {useSelector} from 'react-redux'
 
 const StyledH = styled.h1`
   z-index:1;  
@@ -20,7 +20,8 @@ const StyledH = styled.h1`
 
 `
 
-const Header = ({open}) =>{
+const Header = () =>{
+  const open = useSelector(state=> state.isOpen)
     return(
 
             <StyledH open={open}>MOREKO</StyledH>

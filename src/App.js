@@ -9,13 +9,12 @@ import MiMusica from './components/Mimusica/Mimusica'
 
 function App() {
 
-  const [open, setOpen] = useState(false);
 
   return (
     <div className="App" >
       <nav>
-        <Menu open={open} setOpen={setOpen}/>
-        <Hamburguesa open={open} setOpen={setOpen}/>
+        <Menu/>
+        <Hamburguesa/>
       </nav>
       <section className='main'>
 
@@ -24,7 +23,7 @@ function App() {
 
 
         <Route exact path="/">
-            <Header open={open}/>
+            <Header/>
         </Route>
         <Route exact path='/music'>
           <MiMusica/>

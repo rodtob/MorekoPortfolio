@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import {useSelector, useDispatch} from 'react-redux'
+import {menuOpen} from '../../actions'
 
 const StyledBurger = styled.button`
 position: absolute;
@@ -49,9 +51,11 @@ div:hover{
 
 `
 
-const Hamburguesa=({ open, setOpen })=>{
+const Hamburguesa=()=>{
+  const open = useSelector(state=> state.isOpen)
+  const dispatch = useDispatch()
     return(
-    <StyledBurger open={open} onClick={() => setOpen(!open)}>
+    <StyledBurger open={open} onClick={()=>dispatch(menuOpen())}>
       <div />
       <div />
       <div />
