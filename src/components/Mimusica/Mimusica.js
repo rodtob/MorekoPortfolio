@@ -15,7 +15,7 @@ const Mimusica = ()=>{
                         describe: 'Un gran disco',
                         estilo: 'Pop',
                         img: original,
-                        site: "https://original.com"
+                        site: "https://open.spotify.com/embed/track/1CEEsUrcplfYapCR8FRtW8"
                          },
                     {
                         title:'Anestesiados',
@@ -23,15 +23,15 @@ const Mimusica = ()=>{
                         describe:'boxr',
                         stack: 'Node js, React, MySQL, Sequelize',
                         img: anestesiados,
-                        site: "https://herokuapp.com"
+                        site: "https://open.spotify.com/embed/track/0LdQ1Mu3V4qx96xxMGfdmN"
                 },
                     {
-                        title:'Beatz',
+                        title:'Glosa',
                         year:'2020',
                         describe:'boxr',
                         stack: 'Node js, React, MySQL, Sequelize',
                         img: beatz,
-                        site: "https://herokuapp.com"
+                        site: "https://open.spotify.com/embed/track/7C1BA9hv7eD105mPaCHQpF"
                 }
                 ]
 
@@ -39,21 +39,24 @@ const Mimusica = ()=>{
     return(
         <div className='wrapper--works'  id='works'>
                 {theworks.map((work, index) =>{
-                
+
+
                     return(
+                        
+                        <iframe key={index} src={work.site} width="300" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 
-                    <article key={index+'work'} id={'work'+index} className='work'>
-                        <a to={{ pathname: work.site }} target="_blank">
-                        <img src={work.img} className='circle--img' alt='img'/>
-                        </a>
-                        <section className='text'>
-                        <p className='title--proy'>{work.title}</p>
-                        <p className='title--year'>{work.year}</p>
-                        <p className='title--desc'>{work.describe}</p>
-                        </section>
-                    
+                    // <article key={index+'work'} id={'work'+index} className='work'>
+                    //     <a href={work.site} target="_blank">
+                    //     <img src={work.img} className='circle--img' alt='img'/>
+                    //     </a>
+                    //     <section className='text'>
+                    //     <p className='title--proy'>{work.title}</p>
+                    //     <p className='title--year'>{work.year}</p>
+                    //     <p className='title--desc'>{work.describe}</p>
+                    //     </section>
+            
 
-                    </article>
+                    // </article>
 
                     )
                 })}

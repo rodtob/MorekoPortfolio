@@ -1,6 +1,5 @@
 import './App.css';
 import {Switch, Route} from "react-router-dom";
-import {useState, useRef} from 'react';
 import Menu from './components/Menu/Menu'
 import Hamburguesa from './components/Hamburguesa/Hamburguesa'
 import Header from './components/Header/Header';
