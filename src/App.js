@@ -5,7 +5,7 @@ import Menu from './components/Menu/Menu'
 import Hamburguesa from './components/Hamburguesa/Hamburguesa'
 import Header from './components/Header/Header';
 import MiMusica from './components/Mimusica/Mimusica'
-
+import Pentagono from './components/Pentagono/Pentagono'
 
 function App() {
 
@@ -18,12 +18,12 @@ function App() {
       </nav>
       <section className='main'>
 
-
+    <Pentagono/>
       <Switch>
 
 
         <Route exact path="/">
-            <Header/>
+            {/* <Header/> */}
         </Route>
         <Route exact path='/music'>
           <MiMusica/>
