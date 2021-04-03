@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import {useSelector} from 'react-redux'
-
+import {useSelector,useDispatch} from 'react-redux'
+import {menuOpen} from '../../actions'
 const StyledH = styled.h1`
   z-index:1;  
   color: aliceblue; 
@@ -22,9 +22,11 @@ const StyledH = styled.h1`
 
 const Header = () =>{
   const open = useSelector(state=> state.isOpen)
+  const dispatch = useDispatch()
+  const clickClose = ()=>dispatch(menuOpen())
     return(
 
-            <StyledH open={open}>MOREKO</StyledH>
+            <StyledH open={open} onClick={clickClose}>MOREKO</StyledH>
 
         
     )

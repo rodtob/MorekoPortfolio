@@ -1,8 +1,10 @@
 import isOpenReducer from './isOpen';
+import rotar from './rotar';
 import {combineReducers} from 'redux';
 
 const allReducers = combineReducers({
-    isOpen: isOpenReducer
+    isOpen: isOpenReducer,
+    rotar:rotar
 })
 
 

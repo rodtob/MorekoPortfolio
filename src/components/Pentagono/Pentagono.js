@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-import knob from '../../assets/knob.png'
+import knobPic from '../../assets/knob.png'
 import {useSelector,useDispatch} from 'react-redux'
-import {menuOpen} from '../../actions'
-import React, { useEffect, useState } from 'react';
+import {rotarKnob, desRotarKnob} from '../../actions'
+import React, { useEffect, useState, useRef } from 'react';
 
 const StyledPentagono = styled.div`
   display: grid;
@@ -12,8 +12,7 @@ const StyledPentagono = styled.div`
   .knob{
       width:200px;
       transition:1s all;
-      transform: ${({ open }) => open ? 'rotate(45deg);' : 'rotate(90deg);'};
-      padding: ${({ open }) => open ? '12vh' : '1vh'};
+      transform: ${({ rotar }) =>'rotate('+ rotar +'deg)'};
   }
   .prA{
       display:flex;
@@ -24,28 +23,31 @@ const StyledPentagono = styled.div`
 
 const Pentagono = ()=>{
 
-    const [offset, setOffset] = useState(0);
+    const knob = useRef(null);
 
   useEffect(() => {
-    window.onscroll = () => {
-      setOffset(window.pageYOffset)
-    }
+    console.log(knob)
   }, []);
 
-  console.log(offset); 
 
 
-    const open = useSelector(state=> state.isOpen)
+    const rotar = useSelector(state=> state.rotar)
     const dispatch = useDispatch()
-    const clickClose = ()=>dispatch(menuOpen())
+    // const wheelRotar = ()=>dispatch(rotarKnobA())
+    // const wheeldesRotar = ()=>dispatch(rotarKnobB())
+
+    //usar el ref
+
+    const prueba = (e)=>{ e.deltaY === 100 ? dispatch(rotarKnob()) : dispatch(desRotarKnob())}
+    console.log(rotar)
     return(
-        <StyledPentagono open={open}>
+        <StyledPentagono rotar={rotar}>
 
                 <p>+</p>
                 <p>DJ</p>
                 <p>+</p>
                 <p>MM</p>
-               <img onClick={clickClose} className='knob' src={knob}/>
+               <img ref={knob} onWheel={prueba} className='knob' src={knobPic}/>
                 <p>sd</p>
                 <p>+</p>
                 <section className='prA'>
