@@ -1,8 +1,10 @@
 import volume from './volume.png'
-import {Link} from 'react-router-dom'
+import {Link, useHistory} from 'react-router-dom'
 import styled from 'styled-components'
 import {useSelector,useDispatch} from 'react-redux'
-import {rotarKnob, desRotarKnob} from '../../actions'
+import {rotarKnob, desRotarKnob, chooseSite} from '../../actions'
+import { useState } from 'react'
+import { useEffect, useRef } from 'react'
 
 
 const StyledDiv = styled.div`
@@ -13,23 +15,32 @@ const StyledDiv = styled.div`
     .volume{
         margin:40px;
         width:200px;
-        transform: ${({ rotar }) => 'rotate('+ rotar +'deg)'};
-        transition:1s all;
+        transform: ${({ rotar }) => 'rotate('+ rotar*10 +'deg)'};
+        transition: .2s all;
+    }
+    .titleSection{
+        display:flex;
+        justify-content:center;
+        align-items:center;
     }
     `
     
 
 const StyledSection = styled.section`
     display:flex;
+    .site{
+        font-size:.7rem;
+        text-align:center;
+        padding:10px;
+        margin: 10px;
+        border: 2px solid grey;
+        width: 200px;
+    }
+    .site--selected{
+        color:#FFA200;
+    }
 `
-const StyledSite = styled.p`
-    font-size:.7rem;
-    text-align:center;
-    padding:10px;
-    margin: 10px;
-    border: 2px solid grey;
-    width: 200px;
-`
+
 const SectionTri = styled.section`
 width:100%;
 height:4vh;
@@ -39,37 +50,63 @@ const Triangle = styled.p`
 width: 0;
 height: 0;
 position: absolute;
-left:${({ rotar }) =>  (rotar > 100 ? 95 : rotar < 0 ? 0 : rotar) +'%'}; 
+left:${({ rotar }) => (rotar > 99 ? 99 : rotar) +'%'}; 
 top: 10%;
 border-left: 10px solid transparent;
 border-right: 10px solid transparent;
 border-top: 20px solid grey;`
 
-const sites = [{name: 'dj', dir:'dj'},
-              {name: 'sound design', dir:'sdesign'},
-              {name: 'productions', dir:'productions'},
-              {name: 'my music', dir:'music'},
-              {name: 'about me', dir:'aboutme'}]
+
+
+const sites = [{name: 'dj', dir:'dj', active:[0,14]},
+              {name: 'mix master', dir:'mixmaster', active:[20,28]},
+              {name: 'sound design', dir:'sdesign', active:[36,46]},
+              {name: 'productions', dir:'productions',active:[52,66]},
+              {name: 'my music', dir:'music', active:[68,82]},
+              {name: 'about me', dir:'aboutme', active:[84,96]}]
 
 
 const KnobMenu = ()=>{
+    let history = useHistory();
     const rotar = useSelector(state=> state.rotar)
+    const [newSite, setNewSite] = useState(false)
+    const activeSite = useSelector(state=> state.activeSite)
     const dispatch = useDispatch()
 
     const rotarWheel = (e)=>{ e.deltaY === 100 ? dispatch(rotarKnob()) : dispatch(desRotarKnob())}
-    console.log(rotar)
+    const goSite = (e)=>{
+        e.preventDefault()
+        setNewSite(true)
+        dispatch(chooseSite(rotar))
+    }
+
+    useEffect(()=>{
+        history.push('/'+activeSite)
+    },[newSite])
+
+
+    useEffect(()=>{
+        history.push('/')
+    },[])
+
+
 
     return(
         <StyledDiv rotar={rotar}>
-            <img className='volume' onWheel={rotarWheel} src={volume}/>
+            <section onClick={goSite}>
+                 <img className='volume' onWheel={rotarWheel}  src={volume}/>
+            </section>
             <SectionTri>
             <Triangle rotar={rotar}></Triangle>
             </SectionTri>
             <StyledSection className='section--site'>
                 {sites.map(site =>{
-                    return(<Link to={site.dir} key={site}>
+                    return(<Link to={site.dir} key={site.name}>
                         
-                        <StyledSite>{site.name}</StyledSite>
+                        
+                            <p rotar={rotar} className={rotar > site.active[0]&& rotar< site.active[1]?'site site--selected':'site'}>{site.name}</p>
+                        
+                       
                         
                         </Link>)
                 }

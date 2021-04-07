@@ -4,7 +4,6 @@ import Menu from './components/Menu/Menu'
 import Hamburguesa from './components/Hamburguesa/Hamburguesa'
 import Header from './components/Header/Header';
 import MiMusica from './components/Mimusica/Mimusica'
-import Pentagono from './components/Pentagono/Pentagono'
 
 function App() {
 
