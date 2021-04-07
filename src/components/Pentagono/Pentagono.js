@@ -23,22 +23,11 @@ const StyledPentagono = styled.div`
 
 const Pentagono = ()=>{
 
-    const knob = useRef(null);
-
-  useEffect(() => {
-    console.log(knob)
-  }, []);
-
-
 
     const rotar = useSelector(state=> state.rotar)
     const dispatch = useDispatch()
-    // const wheelRotar = ()=>dispatch(rotarKnobA())
-    // const wheeldesRotar = ()=>dispatch(rotarKnobB())
 
-    //usar el ref
-
-    const prueba = (e)=>{ e.deltaY === 100 ? dispatch(rotarKnob()) : dispatch(desRotarKnob())}
+    const rotarWheel = (e)=>{ e.deltaY === 100 ? dispatch(rotarKnob()) : dispatch(desRotarKnob())}
     console.log(rotar)
     return(
         <StyledPentagono rotar={rotar}>
@@ -47,7 +36,7 @@ const Pentagono = ()=>{
                 <p>DJ</p>
                 <p>+</p>
                 <p>MM</p>
-               <img ref={knob} onWheel={prueba} className='knob' src={knobPic}/>
+               <img onWheel={rotarWheel} className='knob' src={knobPic}/>
                 <p>sd</p>
                 <p>+</p>
                 <section className='prA'>

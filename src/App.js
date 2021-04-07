@@ -15,14 +15,14 @@ function App() {
         <Menu/>
         <Hamburguesa/>
       </nav>
+
       <section className='main'>
 
-    <Pentagono/>
       <Switch>
 
 
         <Route exact path="/">
-            {/* <Header/> */}
+            <Header/>
         </Route>
         <Route exact path='/music'>
           <MiMusica/>
