@@ -13,7 +13,7 @@ const activeSiteReducer = (state = '', action)=>{
         case 'ABOUTME' :
              return 'aboutme';     
 
-        default:
+        default:    
             return state;
     }
 }

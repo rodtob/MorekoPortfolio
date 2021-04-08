@@ -17,9 +17,18 @@ const StyledHeader = styled.div`
   align-items:center;
   .turnUp{
     font-size:1.5rem;
+    transition:.3s all;
+  }
+  .turnUp:hover{
+    text-transform:lowercase;
   }
   .myName{
     font-size:1rem;
+    opacity: 1;
+    transition: .4s all;
+  }
+  .myName:hover{
+    font-size:1.2rem;
   }
 `
 

@@ -55,10 +55,10 @@ const Menu = ()=>{
     return(
  <StyledMenu open={open}>
       <li onClick={clickClose}><Link to='/dj'>+DJ</Link></li>
-      <li onClick={clickClose}><Link to='/music'>+Mi musica</Link></li>
-      <li onClick={clickClose}><Link to='/production'>+Producciones</Link></li>
-      <li onClick={clickClose}><Link to='/sd'>+Sound Design</Link></li>
-      <li onClick={clickClose}><Link to='/mezcla'>+Mezcla</Link></li> 
+      <li onClick={clickClose}><Link to='/mymusic'>+Mi musica</Link></li>
+      <li onClick={clickClose}><Link to='/productions'>+Producciones</Link></li>
+      <li onClick={clickClose}><Link to='/sdesign'>+Sound Design</Link></li>
+      <li onClick={clickClose}><Link to='/mixmaster'>+Mezcla</Link></li> 
       <li onClick={clickClose}><Link to='/'>+home</Link></li> 
   </StyledMenu>
     )

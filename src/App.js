@@ -4,6 +4,8 @@ import Menu from './components/Menu/Menu'
 import Hamburguesa from './components/Hamburguesa/Hamburguesa'
 import Header from './components/Header/Header';
 import MiMusica from './components/Mimusica/Mimusica'
+import Dsonoro from './components/Dsonoro/Dsonoro'
+import Productions from './components/Productions/Productions'
 
 function App() {
 
@@ -23,11 +25,9 @@ function App() {
         <Route exact path="/">
             <Header/>
         </Route>
-        <Route exact path='/music'>
-          <MiMusica/>
-        </Route>
-        <Route exact path='/dj' component={MiMusica}/>
-        
+        <Route exact path='/sdesign'component={Dsonoro}/>
+        <Route exact path='/mymusic' component={MiMusica}/>
+        <Route exact path='/productions' component={Productions}/>
     
       </Switch>
   

@@ -14,9 +14,14 @@ const StyledDiv = styled.div`
     align-items:center;
     .volume{
         margin:40px;
+        cursor: pointer;
         width:200px;
         transform: ${({ rotar }) => 'rotate('+ rotar*10 +'deg)'};
+        filter: saturate(50%); 
         transition: .2s all;
+    }
+    .volume:hover{
+        filter: saturate(100%);   
     }
     .titleSection{
         display:flex;
@@ -35,8 +40,18 @@ const StyledSection = styled.section`
         margin: 10px;
         border: 2px solid grey;
         width: 200px;
+        opacity: .7;
+        transition: .4s all;
+    }
+    .site:hover{
+        opacity: 1;
+        border: 2px solid #fccd7c;
+        color:#FFA200;
+        
     }
     .site--selected{
+        opacity: 1;
+        border: 2px solid #fccd7c;
         color:#FFA200;
     }
 `
@@ -96,7 +111,7 @@ const KnobMenu = ()=>{
             <section onClick={goSite}>
                  <img className='volume' onWheel={rotarWheel}  src={volume}/>
             </section>
-            <SectionTri>
+            <SectionTri onWheel={rotarWheel}>
             <Triangle rotar={rotar}></Triangle>
             </SectionTri>
             <StyledSection className='section--site'>

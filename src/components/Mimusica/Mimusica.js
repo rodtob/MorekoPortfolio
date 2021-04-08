@@ -1,9 +1,6 @@
 import React from 'react'
 
 import './Mimusica.scss'
-import original from '../../assets/originalsq.jpg'
-import anestesiados from '../../assets/Anestesiados.jpg'
-import beatz from '../../assets/Tapabeatz.png'
 
 
 const Mimusica = ()=>{
@@ -14,7 +11,7 @@ const Mimusica = ()=>{
                         year:'2021',
                         describe: 'Un gran disco',
                         estilo: 'Pop',
-                        img: original,
+                        
                         site: "https://open.spotify.com/embed/track/1CEEsUrcplfYapCR8FRtW8"
                          },
                     {
@@ -22,7 +19,7 @@ const Mimusica = ()=>{
                         year:'2020',
                         describe:'boxr',
                         stack: 'Node js, React, MySQL, Sequelize',
-                        img: anestesiados,
+                        
                         site: "https://open.spotify.com/embed/track/0LdQ1Mu3V4qx96xxMGfdmN"
                 },
                     {
@@ -30,7 +27,7 @@ const Mimusica = ()=>{
                         year:'2020',
                         describe:'boxr',
                         stack: 'Node js, React, MySQL, Sequelize',
-                        img: beatz,
+                        
                         site: "https://open.spotify.com/embed/track/7C1BA9hv7eD105mPaCHQpF"
                 }
                 ]
