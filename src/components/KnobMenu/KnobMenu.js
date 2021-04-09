@@ -13,7 +13,8 @@ const StyledDiv = styled.div`
     justify-content:center;
     align-items:center;
     .volume{
-        margin:40px;
+        margin-top:5vh;
+        margin-bottom:1vh;
         cursor: pointer;
         width:200px;
         transform: ${({ rotar }) => 'rotate('+ rotar*10 +'deg)'};
@@ -33,6 +34,7 @@ const StyledDiv = styled.div`
 
 const StyledSection = styled.section`
     display:flex;
+    flex-direction:row;
     .site{
         font-size:.7rem;
         text-align:center;
