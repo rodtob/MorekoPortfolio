@@ -1,14 +1,14 @@
 import styled from 'styled-components'
 import {useSelector, useDispatch} from 'react-redux'
-import {menuOpen} from '../../actions'
+import {menuOpen} from '../../../actions'
+
+
 
 const StyledBurger = styled.button`
-position: absolute;
-top: 5%;
-right: 5%;
 display: flex;
 flex-direction: column;
 justify-content: space-around;
+margin:40px;
 width: 2rem;
 height: 2rem;
 background: transparent;
@@ -54,13 +54,19 @@ div:hover{
 const Hamburguesa=()=>{
   const open = useSelector(state=> state.isOpen)
   const dispatch = useDispatch()
-    return(
-    <StyledBurger open={open} onClick={()=>dispatch(menuOpen())}>
-      <div />
-      <div />
-      <div />
-    </StyledBurger>
-  )
-}
+
+
+      return(
+
+          <StyledBurger open={open} onClick={()=>dispatch(menuOpen())}>
+            <div />
+            <div />
+            <div />
+          </StyledBurger>
+
+    )
+
+  }
+
 
 export default Hamburguesa

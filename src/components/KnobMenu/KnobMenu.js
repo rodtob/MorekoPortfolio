@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import {useSelector,useDispatch} from 'react-redux'
 import {rotarKnob, desRotarKnob, chooseSite} from '../../actions'
 import { useState } from 'react'
-import { useEffect, useRef } from 'react'
+import { useEffect} from 'react'
 
 
 const StyledDiv = styled.div`

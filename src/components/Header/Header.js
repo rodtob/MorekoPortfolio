@@ -36,8 +36,8 @@ const StyledHeader = styled.div`
 const StyledH = styled.h1`
   z-index:1;  
   color: #FFA200; 
-  font-size: 9rem;
-  opacity: ${({ open }) => open ? '0' : '.9'};
+  font-size: 8rem;
+  opacity: ${({ open }) => open ? '0' : '.7'};
   transform: ${({ open }) => open ? 'translateX(120px)' : 'translateX(0)'};
   transition: all 0.3s ease-in-out;
   &:hover {

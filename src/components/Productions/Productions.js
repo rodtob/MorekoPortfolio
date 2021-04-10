@@ -5,6 +5,7 @@ import fantasyTrack from './tracks/Fantasy Option 2 V2.mp3'
 import animeTrack from './tracks/Anime track V2.mp3'
 import upbeatTrack from './tracks/Upbeat V2.mp3'
 import defaultImg from './img/defaultImg.svg'
+import { useState } from 'react'
 
 const DivProduct = styled.div`
 
@@ -13,6 +14,27 @@ const DivProduct = styled.div`
         width:100%;
         align-items:center;
         padding:1vh;
+        .section--filter{
+            display:flex;
+            width:80%;
+            justify-content: flex-end;
+        }
+        .filter--button{
+            all:unset;
+            font-size:.9rem;
+            padding:1vh;
+            margin-right:1vh;
+            border-right: 1px solid black;
+            border-radius: 10px;
+            cursor:pointer;
+            background-color: rgb(120,120,120,0.2);
+            transition: .4s all;
+        }
+        .filter--button:hover{
+            color: black;
+            background-color: rgb(220,220,220,0.4);
+            border-right: 1px solid orange;
+        }
     
 `
 const SectionProduct = styled.section`
@@ -26,6 +48,29 @@ const SectionProduct = styled.section`
 `
 
 const ArticleProduct = styled.article`
+        .fadeMe {
+            animation:fadeIn 1s linear;
+        }
+  
+        @keyframes fadeIn {
+            0% {
+            opacity:0
+            }
+            100% {
+            opacity:1;
+            }
+        }.fadeMe {
+            animation:fadeIn 1s linear;
+        }
+        
+        @keyframes fadeIn {
+            0% {
+            opacity:0
+            }
+            100% {
+            opacity:1;
+            }
+        }
    
         display:flex;
         width:100%;
@@ -50,29 +95,45 @@ const ArticleProduct = styled.article`
     }
     .img-product{
         width: 100%;
+        opacity: .6;
+        transition: .4s all;
     }
+    .img-product:hover{
+        opacity:.9;
+    }
+
     .genre{
         color: orange;
     }
 `
+    const theProductions =[
+    {id:0,name:'Meditation Priestess',genre: 'meditation', track: meditationTrack, img: meditationImg},
+    {id:1,name:'Anime Track',genre: 'drama/horror', track: animeTrack, img: defaultImg},
+    {id:2,name:'Horror Track',genre: 'drama/horror', track: animeTrack, img: defaultImg},
+    {id:3,name:'Upbeat V2',genre: 'upbeat', track: upbeatTrack, img: defaultImg},
+    {id:4,name:'Fantasy',genre: 'drama/horror', track: fantasyTrack, img: defaultImg},
+    ]
 
 const Productions = ()=>{
 
-    const theProductions =[
-    {name:'Meditation Priestess',genre: 'meditation', track: meditationTrack, img: meditationImg},
-    {name:'Anime Track',genre: 'drama/horror', track: animeTrack, img: defaultImg},
-    {name:'Horror Track',genre: 'drama/horror', track: animeTrack, img: defaultImg},
-    {name:'Upbeat V2',genre: 'upbeat', track: upbeatTrack, img: defaultImg},
-]
+    const genres = ['meditation', 'drama/horror', 'upbeat']
+    const [filterItem, setFilterItem] = useState([...genres])
+
 
     return(
         <DivProduct>
-            
+            <section className='section--filter'>
+                <button className='filter--button' onClick={()=>setFilterItem('drama/horror')}>horror</button>
+                <button className='filter--button'  onClick={()=>setFilterItem('upbeat')}>Upbeat</button>
+                <button className='filter--button' onClick={()=>setFilterItem('meditation')}>Meditation</button>
+                <button className='filter--button' onClick={()=>setFilterItem([...genres])}>All</button> 
+            </section>
+               
             <SectionProduct>
-                {theProductions.map(production=>{
-                    return(
-                        <ArticleProduct >
-                            <div className='img-wrapper'>
+                {theProductions.filter(element => filterItem.includes(element.genre)).map(production=>{
+                    return (
+                        <ArticleProduct key={production.name}>
+                            <div className='img-wrapper fadeMe'>
                                 <img className='img-product' src={production.img}/>
                             </div>
                             <p className='text-product'>{production.name}</p>

@@ -1,9 +1,7 @@
-import {
-    Link
-  } from "react-router-dom";
+import {Link} from "react-router-dom";
 import styled from 'styled-components'
 import {useSelector,useDispatch} from 'react-redux'
-import {menuOpen} from '../../actions'
+import {menuOpen} from '../../../actions'
 
   const StyledMenu = styled.nav`
   display: flex;
@@ -37,6 +35,7 @@ import {menuOpen} from '../../actions'
     transition: color 0.3s linear;
 
     @media (max-width: 576px) {
+      height:100vh;
       font-size: 1.5rem;
       text-align: center;
     }

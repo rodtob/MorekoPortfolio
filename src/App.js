@@ -1,27 +1,19 @@
 import './App.css';
 import {Switch, Route} from "react-router-dom";
-import Menu from './components/Menu/Menu'
-import Hamburguesa from './components/Hamburguesa/Hamburguesa'
 import Header from './components/Header/Header';
 import MiMusica from './components/Mimusica/Mimusica'
 import Dsonoro from './components/Dsonoro/Dsonoro'
 import Productions from './components/Productions/Productions'
+import NavBar from './components/NavBar/NavBar';
 
 function App() {
 
 
   return (
     <div className="App" >
-      <nav>
-        <Menu/>
-        <Hamburguesa/>
-      </nav>
-
+      <NavBar/>
       <section className='main'>
-
       <Switch>
-
-
         <Route exact path="/">
             <Header/>
         </Route>
