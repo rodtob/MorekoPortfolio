@@ -11,6 +11,7 @@ const DivProduct = styled.div`
 
         display:flex;
         flex-direction: column;
+        margin-top: 10vh;
         width:100%;
         align-items:center;
         padding:1vh;
@@ -89,7 +90,6 @@ const ArticleProduct = styled.article`
     }
     .img-wrapper{
         border: 1px solid rgba(140, 140, 140, 0.20);
-        height:100px;
         width: 100px;
         display:flex;
     }

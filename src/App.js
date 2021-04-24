@@ -4,6 +4,7 @@ import Header from './components/Header/Header';
 import MiMusica from './components/Mimusica/Mimusica'
 import Dsonoro from './components/Dsonoro/Dsonoro'
 import Productions from './components/Productions/Productions'
+import AboutMe from './components/AboutMe/AboutMe'
 import NavBar from './components/NavBar/NavBar';
 
 function App() {
@@ -20,10 +21,9 @@ function App() {
         <Route exact path='/sdesign'component={Dsonoro}/>
         <Route exact path='/mymusic' component={MiMusica}/>
         <Route exact path='/productions' component={Productions}/>
-    
+        <Route exact path='/aboutme' component={AboutMe}/>
+
       </Switch>
-  
-      
       
       </section>
 

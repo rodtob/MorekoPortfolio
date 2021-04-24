@@ -57,7 +57,8 @@ const Menu = ()=>{
       <li onClick={clickClose}><Link to='/mymusic'>+Mi musica</Link></li>
       <li onClick={clickClose}><Link to='/productions'>+Producciones</Link></li>
       <li onClick={clickClose}><Link to='/sdesign'>+Sound Design</Link></li>
-      <li onClick={clickClose}><Link to='/mixmaster'>+Mezcla</Link></li> 
+      <li onClick={clickClose}><Link to='/mixmaster'>+Mezcla</Link></li>
+      <li onClick={clickClose}><Link to='/aboutme'>+About Me</Link></li>  
       <li onClick={clickClose}><Link to='/'>+home</Link></li> 
   </StyledMenu>
     )

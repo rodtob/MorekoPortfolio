@@ -1,0 +1,32 @@
+.wrapperAboutMe{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-self: center;
+    justify-content: center;
+    position: relative;
+}
+
+.profileImg{
+    height: 100%;
+    position: absolute;
+    right: 0%;
+}
+.wrapperBio{
+    background-color: rgba(58, 223, 160, 0.096);
+    width: 60%;
+    height: 100%;
+    position: absolute;
+    left: 0%;
+    z-index: 2;
+}
+
+.bioMoreko{
+    font-size: .7rem;
+    padding-left: 19%;
+    padding-right: 9%;
+    padding-top: 10vh;
+    line-height: 1.2rem;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}

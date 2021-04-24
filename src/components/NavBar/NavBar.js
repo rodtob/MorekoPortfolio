@@ -5,7 +5,6 @@ import styled from 'styled-components'
 import logoMoreko from './logoMoreko.png'
 
 
-
 const DivWrapper = styled.div `
     position: absolute;
     display:flex;
@@ -15,8 +14,16 @@ const DivWrapper = styled.div `
     boder: 2px red solid;
     z-index:10;
     .logoMoreko{
-        margin:20px;
+        margin-left: 46px;
+        margin-top: 42px;
+        width: 64px;
+        opacity: .7;
+        transition: .4s all;
     }
+    .logoMoreko:hover{
+        opacity:1;  
+    }
+
 
 `
 
