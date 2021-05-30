@@ -3,7 +3,6 @@
 
 .wrapper--works{
     display: grid;
-    width: 50%;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 300px
 }

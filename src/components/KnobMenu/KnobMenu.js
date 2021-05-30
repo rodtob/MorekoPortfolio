@@ -56,6 +56,9 @@ const StyledSection = styled.section`
         border: 2px solid #fccd7c;
         color:#FFA200;
     }
+    @media screen and (max-width: 800px) {
+        flex-direction:column;
+      }
 `
 
 const SectionTri = styled.section`
@@ -90,7 +93,7 @@ const KnobMenu = ()=>{
     const activeSite = useSelector(state=> state.activeSite)
     const dispatch = useDispatch()
 
-    const rotarWheel = (e)=>{ e.deltaY === 100 ? dispatch(rotarKnob()) : dispatch(desRotarKnob())}
+    const rotarWheel = (e)=>{ e.deltaY > 0 ? dispatch(rotarKnob()) : dispatch(desRotarKnob())}
     const goSite = (e)=>{
         e.preventDefault()
         setNewSite(true)
@@ -111,7 +114,7 @@ const KnobMenu = ()=>{
     return(
         <StyledDiv rotar={rotar}>
             <section onClick={goSite}>
-                 <img className='volume' onWheel={rotarWheel}  src={volume}/>
+                 <img className='volume' onWheel={rotarWheel} alt='knob' src={volume}/>
             </section>
             <SectionTri onWheel={rotarWheel}>
             <Triangle rotar={rotar}></Triangle>

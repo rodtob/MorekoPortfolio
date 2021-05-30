@@ -11,7 +11,7 @@ const DivProduct = styled.div`
 
         display:flex;
         flex-direction: column;
-        margin-top: 10vh;
+        margin-top: 12vh;
         width:100%;
         align-items:center;
         padding:1vh;
@@ -26,7 +26,7 @@ const DivProduct = styled.div`
             padding:1vh;
             margin-right:1vh;
             border-right: 1px solid black;
-            border-radius: 10px;
+            border-radius: 1vh;
             cursor:pointer;
             background-color: rgb(120,120,120,0.2);
             transition: .4s all;
@@ -78,7 +78,7 @@ const ArticleProduct = styled.article`
         border-top: 1px solid grey;
         border-bottom: 1px solid grey;
         justify-content:space-around;
-        padding:10px;
+        padding:1vh;
         align-items:center;
     .text-product{
         font-size:.7rem;
@@ -90,7 +90,7 @@ const ArticleProduct = styled.article`
     }
     .img-wrapper{
         border: 1px solid rgba(140, 140, 140, 0.20);
-        width: 100px;
+        max-width: 10vh;
         display:flex;
     }
     .img-product{
@@ -116,7 +116,7 @@ const ArticleProduct = styled.article`
 
 const Productions = ()=>{
 
-    const genres = ['meditation', 'drama/horror', 'upbeat']
+    const genres = ['meditation', 'drama/horror', 'upbeat', 'children']
     const [filterItem, setFilterItem] = useState([...genres])
 
 
@@ -126,6 +126,7 @@ const Productions = ()=>{
                 <button className='filter--button' onClick={()=>setFilterItem('drama/horror')}>horror</button>
                 <button className='filter--button'  onClick={()=>setFilterItem('upbeat')}>Upbeat</button>
                 <button className='filter--button' onClick={()=>setFilterItem('meditation')}>Meditation</button>
+                <button className='filter--button' onClick={()=>setFilterItem('children')}>Children</button>
                 <button className='filter--button' onClick={()=>setFilterItem([...genres])}>All</button> 
             </section>
                
@@ -134,7 +135,7 @@ const Productions = ()=>{
                     return (
                         <ArticleProduct key={production.name}>
                             <div className='img-wrapper fadeMe'>
-                                <img className='img-product' src={production.img}/>
+                                <img className='img-product' alt={production.img} src={production.img}/>
                             </div>
                             <p className='text-product'>{production.name}</p>
                             <p className='text-product genre'>{production.genre}</p>

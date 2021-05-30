@@ -18,7 +18,7 @@ const AboutMe = () =>{
                 También soy DJ y me especializo en distintos géneros de música bailable que abarcan el groove, hip hop, disco, y house.
                 </p>
             </article>
-            <img className='profileImg' src={profileImg}/>
+            <img className='profileImg' alt='profileMoreko' src={profileImg}/>
         </section>
     )
 }

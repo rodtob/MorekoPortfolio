@@ -32,7 +32,7 @@ const NavBar = ()=>{
     return(
         <DivWrapper>
             <Link to='/'>
-                <img className='logoMoreko' src={logoMoreko}/>
+                <img className='logoMoreko' alt='logoMoreko' src={logoMoreko}/>
             </Link>
             <Hamburguesa/>
             <Menu/>

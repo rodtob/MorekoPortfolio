@@ -8,7 +8,7 @@ import {menuOpen} from '../../../actions'
   flex-direction: column;
   justify-content: center;
   align-items:center;
-  background:#9f9af34a;
+  background: rgb(15, 3, 64,0.7);
   transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
   height: 100vh;
   width: 100%;
@@ -30,7 +30,8 @@ import {menuOpen} from '../../../actions'
     padding: 1.5vh 0;
     font-weight: bold;
     letter-spacing: 0.5rem;
-    color: #0D0C1D;
+    color:#cac5de;
+    opacity:1;
     text-decoration: none;
     transition: color 0.3s linear;
 
