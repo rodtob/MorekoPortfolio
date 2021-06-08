@@ -16,7 +16,7 @@ const DivWrapper = styled.div `
     .logoMoreko{
         margin-left: 46px;
         margin-top: 42px;
-        width: 64px;
+        width: 80px;
         opacity: .7;
         transition: .4s all;
     }

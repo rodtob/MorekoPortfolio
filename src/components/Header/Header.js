@@ -40,12 +40,12 @@ const StyledH = styled.h1`
   opacity: ${({ open }) => open ? '0' : '.7'};
   transform: ${({ open }) => open ? 'translateX(120px)' : 'translateX(0)'};
   transition: all 0.3s ease-in-out;
-  &:hover {
-    color: white;
-    letter-spacing: 2px;
-    text-transform: lowercase;
-    opacity:.4;
-  }
+  // &:hover {
+  //   color: white;
+  //   letter-spacing: 2px;
+  //   text-transform: lowercase;
+  //   opacity:.4;
+  // }
 `
 
 
@@ -58,9 +58,9 @@ const Header = () =>{
     return(
       <StyledDiv>
         <StyledHeader>
-          <h4 className='myName'>hi, my name is</h4>
-          <StyledH open={open} onClick={clickClose}>MOREKO</StyledH>
-          <h3 className='turnUp'>TURN THE VOLUME UP</h3>
+          {/* <h4 className='myName'>hi, my name is</h4> */}
+          <StyledH>MOREKO</StyledH>
+          <h3 className='turnUp'>SUBI EL VOLUMEN</h3>
         </StyledHeader>
         <KnobMenu/>
       </StyledDiv>
