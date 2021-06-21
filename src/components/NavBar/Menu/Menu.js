@@ -53,14 +53,14 @@ const Menu = ()=>{
   const dispatch = useDispatch()
   const clickClose = ()=>dispatch(menuOpen())
     return(
- <StyledMenu open={open}>
-      <li onClick={clickClose}><Link to='/'>+Home</Link></li>
-      <li onClick={clickClose}><Link to='/mixmaster'>+Mezcla/Master</Link></li>
-      <li onClick={clickClose}><Link to='/dj'>+DJ</Link></li>
-      <li onClick={clickClose}><Link to='/mymusic'>+Mi musica</Link></li>
-      <li onClick={clickClose}><Link to='/productions'>+Producciones</Link></li>
-      <li onClick={clickClose}><Link to='/sdesign'>+Diseño Sonoro</Link></li>
-      <li onClick={clickClose}><Link to='/aboutme'>+Sobre mí</Link></li>  
+ <StyledMenu open={open} onClick={clickClose}>
+      <li><Link to='/'>+home</Link></li>
+      <li><Link to='/mixmaster'>+mezcla/master</Link></li>
+      <li><Link to='/dj'>+dj</Link></li>
+      <li><Link to='/mymusic'>+mi musica</Link></li>
+      <li><Link to='/productions'>+producciones</Link></li>
+      <li><Link to='/sdesign'>+d.sonoro</Link></li>
+      <li><Link to='/aboutme'>+sobre mi</Link></li>  
   </StyledMenu>
     )
 }

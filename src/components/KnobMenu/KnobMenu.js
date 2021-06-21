@@ -78,11 +78,11 @@ border-top: 20px solid grey;`
 
 
 
-const sites = [{name: 'dj', dir:'dj', active:[0,14]},
-              {name: 'mezcla/master', dir:'mixmaster', active:[20,28]},
-              {name: 'diseno sonoro', dir:'sdesign', active:[36,46]},
+const sites = [{name: 'mezcla/master', dir:'mixmaster', active:[0,14]},
+              {name: 'dj', dir:'dj', active:[20,28]},
+              {name: 'mi musica', dir:'mymusic', active:[36,46]},
               {name: 'producciones', dir:'productions',active:[52,66]},
-              {name: 'mi musica', dir:'music', active:[68,82]},
+              {name: 's.design', dir:'sdesign', active:[68,82]},
               {name: 'sobre mi', dir:'aboutme', active:[84,96]}]
 
 

@@ -14,7 +14,7 @@ const DivWrapper = styled.div `
     boder: 2px red solid;
     z-index:10;
     .logoMoreko{
-        margin-left: 46px;
+        margin-right: 46px;
         margin-top: 42px;
         width: 80px;
         opacity: .7;
@@ -31,10 +31,10 @@ const DivWrapper = styled.div `
 const NavBar = ()=>{
     return(
         <DivWrapper>
+            <Hamburguesa/>
             <Link to='/'>
                 <img className='logoMoreko' alt='logoMoreko' src={logoMoreko}/>
             </Link>
-            <Hamburguesa/>
             <Menu/>
         </DivWrapper>
     )

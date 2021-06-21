@@ -6,6 +6,7 @@ import Dsonoro from './components/Dsonoro/Dsonoro'
 import Productions from './components/Productions/Productions'
 import AboutMe from './components/AboutMe/AboutMe'
 import NavBar from './components/NavBar/NavBar';
+import Dj from './components/Dj/Dj';
 
 function App() {
 
@@ -22,6 +23,8 @@ function App() {
         <Route exact path='/mymusic' component={MiMusica}/>
         <Route exact path='/productions' component={Productions}/>
         <Route exact path='/aboutme' component={AboutMe}/>
+        <Route exact path='/dj' component={Dj}/>
+
 
       </Switch>
       
