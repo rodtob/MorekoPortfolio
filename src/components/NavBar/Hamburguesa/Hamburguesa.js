@@ -8,8 +8,8 @@ const StyledBurger = styled.button`
 display: flex;
 flex-direction: column;
 justify-content: space-around;
-margin:40px;
-width: 2rem;
+margin:30px;
+width: 1rem;
 height: 2rem;
 background: transparent;
 border: none;
@@ -54,7 +54,6 @@ div:hover{
 const Hamburguesa=()=>{
   const open = useSelector(state=> state.isOpen)
   const dispatch = useDispatch()
-
 
       return(
 

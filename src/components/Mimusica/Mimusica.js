@@ -11,23 +11,18 @@ const Mimusica = ()=>{
                         year:'2021',
                         describe: 'Un gran disco',
                         estilo: 'Pop',
-                        
                         site: "https://open.spotify.com/embed/track/1CEEsUrcplfYapCR8FRtW8"
                          },
                     {
                         title:'Anestesiados',
                         year:'2020',
                         describe:'boxr',
-                        stack: 'Node js, React, MySQL, Sequelize',
-                        
                         site: "https://open.spotify.com/embed/track/0LdQ1Mu3V4qx96xxMGfdmN"
                 },
                     {
                         title:'Glosa',
                         year:'2020',
                         describe:'boxr',
-                        stack: 'Node js, React, MySQL, Sequelize',
-                        
                         site: "https://open.spotify.com/embed/track/7C1BA9hv7eD105mPaCHQpF"
                 }
                 ]

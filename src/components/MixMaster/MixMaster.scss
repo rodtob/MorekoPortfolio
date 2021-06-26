@@ -1,37 +1,42 @@
 @import '../../Theme/_variable.scss';
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
 
-.wrapper--works{
+.mix-master-wrapper--works{
     display: flex;
-    flex-direction: row;
-}
-
-.work{
-    display: flex; 
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 2vh;
-    min-height: 20vh;
+    width: 90%;    
 }
 
-.circle--img{
+.mix-master-work{
     border: 2px solid rgb(196, 162, 14);
-    width: 150px;
+    width: 90%;
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    // justify-content: center;
+    // margin-bottom: 2vh;
+    // min-height: 20%;
+}
+
+.mix-master-circle--img{
+    border: 2px solid rgb(196, 162, 14);
+    width: 30%;
     transition: 1s all;
     cursor: pointer;&:hover{
         border: 2px dashed rgb(67, 112, 133);
     }
 }
 
-.text{
+.mix-master-text{
     overflow-wrap: break-word;
     width: 60%;
     text-align: center;
     font-size: .5rem;
 }
 
-.number--index{
+.mix-master-number--index{
     align-self: flex-start;
     opacity: 0.6;
     transition: .2s all;
@@ -41,14 +46,14 @@
     }
 }
 
-.title--proy{
+.mix-master-title--proy{
     font-size: .5rem;
     transition: .4s all;&:hover{
         opacity: .7 ;
     }
 }
 
-.title--year{
+.mix-master-title--year{
     color: $primary-color;
     font-family: 'Lato', sans-serif;
     transition: .4s all;&:hover{
@@ -56,28 +61,27 @@
     }
 }
 
-.title--desc{
+.mix-master-title--desc{
     color: $forth-color;
     font-size: .4rem;
 }
 @media(max-width: 960px){
-    .work{
+    .mix-master-work{
         display: flex; 
         flex-direction: column;
         align-items: center;
         justify-content: center;
         margin-bottom: 2vh;
-        min-height: 20vh;
     }
-    .text{
+    .mix-master-text{
         text-align: center;
         margin-top: 2vh;
         font-size: 1rem;
     }
-    .wrapper--works{
+    .mix-master-wrapper--works{
         min-height: 75vh;
     }
-    .number--index{
+    .mix-master-number--index{
         order:-1;
         align-self: center;
     }

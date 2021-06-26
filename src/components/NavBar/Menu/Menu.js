@@ -8,7 +8,7 @@ import {menuOpen} from '../../../actions'
   flex-direction: column;
   justify-content: center;
   align-items:center;
-  background: rgb(15, 3, 64,0.7);
+  background: rgb(15, 3, 64,0.9);
   transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
   height: 100vh;
   width: 100%;
