@@ -11,10 +11,12 @@
 
 .mix-master-work{
     border: 2px solid rgb(196, 162, 14);
-    width: 90%;
+    width: 70%;
     display: flex; 
     flex-direction: row;
     align-items: center;
+    padding: 10px;
+    margin: 10px;
     // justify-content: center;
     // margin-bottom: 2vh;
     // min-height: 20%;
@@ -22,7 +24,8 @@
 
 .mix-master-circle--img{
     border: 2px solid rgb(196, 162, 14);
-    width: 30%;
+    width: 10vh;
+    height: 10vh;
     transition: 1s all;
     cursor: pointer;&:hover{
         border: 2px dashed rgb(67, 112, 133);
@@ -30,10 +33,13 @@
 }
 
 .mix-master-text{
+    display: flex;
+    align-items: center;
     overflow-wrap: break-word;
-    width: 60%;
+    width: 100%;
     text-align: center;
     font-size: .5rem;
+    white-space: nowrap;
 }
 
 .mix-master-number--index{
@@ -42,12 +48,16 @@
     transition: .2s all;
     font-size: 4rem; 
     transition: .4s all;&:hover{
-        color: $secondary-color;;
+        color: $secondary-color;
     }
 }
 
 .mix-master-title--proy{
-    font-size: .5rem;
+    font-family: 'Roboto', sans-serif;
+    justify-content: flex-start;
+    text-overflow: ellipsis;
+    color: $primary-color;
+    font-size: 1rem;
     transition: .4s all;&:hover{
         opacity: .7 ;
     }
@@ -55,6 +65,8 @@
 
 .mix-master-title--year{
     color: $primary-color;
+    margin-left: 5%;
+    font-size: 1rem;
     font-family: 'Lato', sans-serif;
     transition: .4s all;&:hover{
         color: $secondary-color;; 
@@ -63,7 +75,16 @@
 
 .mix-master-title--desc{
     color: $forth-color;
+    font-family: 'Roboto', sans-serif;
+    text-align: left;
+    margin-top: 2%;
     font-size: .4rem;
+}
+
+.mix-master-section--column{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
 }
 @media(max-width: 960px){
     .mix-master-work{

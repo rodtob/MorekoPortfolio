@@ -33,13 +33,16 @@ const StyledDiv = styled.div`
 const StyledSection = styled.section`
   display: flex;
   flex-direction: row;
+  width:100%;
+  justify-content: center;
+  align-items: space-between;
   .site {
     font-size: 0.7rem;
     text-align: center;
     padding: 10px;
     margin: 10px;
     border: 2px solid grey;
-    width: 200px;
+    width: 25vh;
     opacity: 0.7;
     transition: 0.4s all;
   }
@@ -119,17 +122,13 @@ const KnobMenu = () => {
       <StyledSection className="section--site">
         {sites.map((site) => {
           return (
-            <Link to={site.dir} key={site.name}>
-              <p
-                rotar={rotar}
-                className={
-                  rotar > site.active[0] && rotar < site.active[1]
-                    ? "site site--selected"
-                    : "site"
-                }
-              >
-                {site.name}
-              </p>
+            <Link to={site.dir} key={site.name} rotar={rotar}
+            className={
+              rotar > site.active[0] && rotar < site.active[1]
+                ? "site site--selected"
+                : "site"
+            }>
+            {site.name}
             </Link>
           );
         })}

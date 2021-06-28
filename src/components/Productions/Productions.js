@@ -12,7 +12,7 @@ const DivProduct = styled.div`
         display:flex;
         z-index:2;
         flex-direction: column;
-        margin-top: 22vh;
+        margin-top: 32vh;
         width:100%;
         min-height:100vh;
         align-items:center;
@@ -110,18 +110,27 @@ const ArticleProduct = styled.article`
     .genre{
         color: orange;
     }
+    .meditation{
+        color: #6fcdfbd2;
+    }
+    .upbeat{
+        color: #813772;
+    }
+    .drama--horror{
+        color: #6f70aa;
+    }
 `
     const theProductions =[
     {id:0,name:'Meditation Priestess',genre: 'meditation', track: meditationTrack, img: meditationImg},
-    {id:1,name:'Anime Track',genre: 'drama/horror', track: animeTrack, img: defaultImg},
-    {id:2,name:'Horror Track',genre: 'drama/horror', track: animeTrack, img: defaultImg},
+    {id:1,name:'Anime Track',genre: 'drama--horror', track: animeTrack, img: defaultImg},
+    {id:2,name:'Horror Track',genre: 'drama--horror', track: animeTrack, img: defaultImg},
     {id:3,name:'Upbeat V2',genre: 'upbeat', track: upbeatTrack, img: defaultImg},
-    {id:4,name:'Fantasy',genre: 'drama/horror', track: fantasyTrack, img: defaultImg},
+    {id:4,name:'Fantasy',genre: 'drama--horror', track: fantasyTrack, img: defaultImg},
     ]
 
 const Productions = ()=>{
 
-    const genres = ['meditation', 'drama/horror', 'upbeat', 'children']
+    const genres = ['meditation', 'drama--horror', 'upbeat', 'children']
     const [filterItem, setFilterItem] = useState([...genres])
 
 
@@ -143,7 +152,7 @@ const Productions = ()=>{
                                 <img className='img-product' alt={production.img} src={production.img}/>
                             </div>
                             <p className='text-product'>{production.name}</p>
-                            <p className='text-product genre'>{production.genre}</p>
+                            <p className={`text-product ${production.genre}`}>{production.genre}</p>
                             <audio controls>
                                 <source src={production.track} type="audio/mpeg"/>
                             </audio>

@@ -10,6 +10,7 @@ const DivWrapper = styled.div `
     display:flex;
     flex-direction:row;
     width: 100%;
+    min-height:5vh;
     justify-content: space-between;
     boder: 2px red solid;
     z-index:10;
