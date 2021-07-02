@@ -4,6 +4,7 @@ import {useSelector,useDispatch} from 'react-redux'
 import {menuOpen} from '../../../actions'
 
   const StyledMenu = styled.nav`
+  z-index:12;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,7 +22,7 @@ import {menuOpen} from '../../../actions'
 
   @media (max-width: 576px) {
       width: 100%;
-      z-index:10;
+      z-index:12;
     }
 
   a {

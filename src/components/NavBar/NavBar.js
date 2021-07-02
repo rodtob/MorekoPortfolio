@@ -6,18 +6,19 @@ import logoMoreko from './logoMoreko.png'
 
 
 const DivWrapper = styled.div `
-    position: absolute;
     display:flex;
     flex-direction:row;
     width: 100%;
-    min-height:5vh;
+    height:7vh;
     justify-content: space-between;
-    boder: 2px red solid;
+    align-items:center;
     z-index:10;
+    .wrapper--logo{
+        display:flex;
+    }
     .logoMoreko{
-        margin-right: 46px;
-        margin-top: 42px;
-        width: 60px;
+        margin-right: 2vw;
+        width: 30px;
         opacity: .7;
         transition: .4s all;
     }
@@ -33,7 +34,7 @@ const NavBar = ()=>{
     return(
         <DivWrapper>
             <Hamburguesa/>
-            <Link to='/'>
+            <Link to='/' className='wrapper--logo'>
                 <img className='logoMoreko' alt='logoMoreko' src={logoMoreko}/>
             </Link>
             <Menu/>

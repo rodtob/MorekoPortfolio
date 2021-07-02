@@ -12,9 +12,9 @@ const DivProduct = styled.div`
         display:flex;
         z-index:2;
         flex-direction: column;
-        margin-top: 32vh;
         width:100%;
         min-height:100vh;
+        margin-top:5vh;
         align-items:center;
         padding:1vh;
         .section--filter{
@@ -138,7 +138,7 @@ const Productions = ()=>{
         <DivProduct>
             <section className='section--filter'>
                 <button className='filter--button' onClick={()=>setFilterItem([...genres])}>All</button> 
-                <button className='filter--button' onClick={()=>setFilterItem('drama/horror')}>horror</button>
+                <button className='filter--button' onClick={()=>setFilterItem('drama--horror')}>horror</button>
                 <button className='filter--button'  onClick={()=>setFilterItem('upbeat')}>Upbeat</button>
                 <button className='filter--button' onClick={()=>setFilterItem('meditation')}>Meditation</button>
                 <button className='filter--button' onClick={()=>setFilterItem('children')}>Children</button>

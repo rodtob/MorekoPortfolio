@@ -10,7 +10,7 @@ const StyledDiv = styled.div`
     justify-content: space-between;`
 
 const StyledHeader = styled.div`
-  margin-top:10vh;
+  margin-top:4vh;
   display:flex;
   flex-direction:column;
   justify-content:space-between;

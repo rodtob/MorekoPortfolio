@@ -11,30 +11,21 @@
   color: rgb(192, 192, 192);
 }
 
-.main{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100%;
+.App{
   background-color: rgb(0, 0, 0);
   background-image: url("../src/assets/bkA.png");
   background-repeat: no-repeat;
-  background-size: 100%;
+  overflow: hidden;
+  max-height: 100vh;
 }
 
-.navBar{
-  position: absolute;
-  z-index: 10;
-  top: 4%;
-  right: 4%;
+.main{
   display: flex;
-  height: 10vh;
+  flex-direction: column;
+  align-items: center;
+  min-height: 95vh;
   width: 100%;
-  align-self: flex-start;
-  justify-content: flex-end;
-  margin-left: 2vh;
+  background-size: 100%;
 }
 
 .opcion--section{

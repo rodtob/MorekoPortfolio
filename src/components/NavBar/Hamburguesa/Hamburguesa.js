@@ -5,25 +5,26 @@ import {menuOpen} from '../../../actions'
 
 
 const StyledBurger = styled.button`
+z-index:14;
 display: flex;
 flex-direction: column;
 justify-content: space-around;
-margin:30px;
-width: 1rem;
-height: 2rem;
+aling-items:center;
+width: 2vw;
+height: 40%;
+margin-left: 2vw;
 background: transparent;
 border: none;
 cursor: pointer;
 padding: 0;
-z-index: 10;
 
 &:focus {
 outline: none;
 }
 
 div {
-width: 2rem;
-height: 0.25rem;
+width: 16px;
+height: 3px;
 background: ${({ open }) => open ? '#c8d8d3' : '#EFFFFA'};
 border-radius: 10px;
 transition: all 0.3s linear;
@@ -45,7 +46,7 @@ transform-origin: 1px;
 }
 div:hover{
   background-color: orange;
-  width: 2.3rem;
+  width: 1.7rem;
 }
 
 
