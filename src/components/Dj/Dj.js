@@ -16,7 +16,7 @@ const DivStyled = styled.div`
 
 const Dj = () => {
   return (
-    <DivStyled>
+    <DivStyled className="heightAllSections">
       <p>
         Lorem psum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry's standard dummy text ever

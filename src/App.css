@@ -41,3 +41,8 @@
 .unboton{
   z-index: 10;
 }
+
+.heightAllSections{
+  margin-top: 2vh;
+  min-height: 70vh;
+}

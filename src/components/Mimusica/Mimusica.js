@@ -29,7 +29,7 @@ const Mimusica = ()=>{
 
 
     return(
-        <div className='wrapper--works'  id='works'>
+        <div className='wrapper--works heightAllSections'  id='works'>
                 {theworks.map((work, index) =>{
 
 

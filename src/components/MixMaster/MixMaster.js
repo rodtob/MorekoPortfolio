@@ -61,7 +61,7 @@ const MixMaster = () => {
   ];
 
   return (
-    <div className="mix-master-wrapper--works" id="works">
+    <div className="mix-master-wrapper--works heightAllSections" id="works">
       {theworks.map((work, index) => {
         return (
           <article

@@ -23,7 +23,7 @@ outline: none;
 }
 
 div {
-width: 16px;
+width: 21px;
 height: 3px;
 background: ${({ open }) => open ? '#c8d8d3' : '#EFFFFA'};
 border-radius: 10px;
