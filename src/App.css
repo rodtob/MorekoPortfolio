@@ -19,6 +19,11 @@
   max-height: 100vh;
 }
 
+.aboutMeBack{
+  background-image: url("../src/assets/PagWebBio.png");
+  background-size: 110vw;
+}
+
 .main{
   display: flex;
   flex-direction: column;

@@ -1,6 +1,5 @@
 import './App.css';
-import {Switch, Route} from "react-router-dom";
-import { useSelector } from "react-redux";
+import {Switch, Route, useLocation} from "react-router-dom";
 import Header from './components/Header/Header';
 import MiMusica from './components/Mimusica/Mimusica'
 import Dsonoro from './components/Dsonoro/Dsonoro'
@@ -9,21 +8,24 @@ import AboutMe from './components/AboutMe/AboutMe'
 import NavBar from './components/NavBar/NavBar';
 import Dj from './components/Dj/Dj';
 import MixMaster from './components/MixMaster/MixMaster';
-import styled from 'styled-components'
+import { useEffect, useState } from 'react';
 
-const StyledDiv = styled.div`
-
-background-color: ${({ activeSite }) => activeSite == "aboutme" ? 'blue':'green'};
-`
 
 function App() {
 
-  const activeSite = useSelector((state) => state.activeSite);
-  
+  let [pageBackground, setBackground] = useState("")
+  let location = useLocation();
 
+  useEffect(()=>{
+    const styleBackground = ()=> location.pathname === "/aboutme" ?  setBackground("aboutMeBack") : setBackground("");
+    styleBackground()
+    console.log(pageBackground)
+  },
+  [location.pathname])
+ 
 
   return (
-    <StyledDiv className="App" activeSite={activeSite} >
+    <div className={`App ${pageBackground}`}>
       <NavBar/>
       <section className='main'>
       <Switch>
@@ -41,7 +43,7 @@ function App() {
       </section>
 
       
-    </StyledDiv>
+    </div>
   );
 }
 
