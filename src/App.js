@@ -1,5 +1,6 @@
 import './App.css';
 import {Switch, Route} from "react-router-dom";
+import { useSelector } from "react-redux";
 import Header from './components/Header/Header';
 import MiMusica from './components/Mimusica/Mimusica'
 import Dsonoro from './components/Dsonoro/Dsonoro'
@@ -8,12 +9,21 @@ import AboutMe from './components/AboutMe/AboutMe'
 import NavBar from './components/NavBar/NavBar';
 import Dj from './components/Dj/Dj';
 import MixMaster from './components/MixMaster/MixMaster';
+import styled from 'styled-components'
+
+const StyledDiv = styled.div`
+
+background-color: ${({ activeSite }) => activeSite == "aboutme" ? 'blue':'green'};
+`
 
 function App() {
 
+  const activeSite = useSelector((state) => state.activeSite);
+  
+
 
   return (
-    <div className="App" >
+    <StyledDiv className="App" activeSite={activeSite} >
       <NavBar/>
       <section className='main'>
       <Switch>
@@ -31,7 +41,7 @@ function App() {
       </section>
 
       
-    </div>
+    </StyledDiv>
   );
 }
 

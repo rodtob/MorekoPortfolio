@@ -3,7 +3,7 @@
 
 .mix-master-wrapper--works{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     width: 90%;
@@ -12,7 +12,7 @@
 
 .mix-master-work{
     border: 2px solid rgb(196, 162, 14);
-    width: 50%;
+    width: 100%;
     display: flex; 
     flex-direction: row;
     align-items: center;
@@ -36,11 +36,11 @@
 .mix-master-text{
     display: flex;
     align-items: center;
+    text-align: left;
     overflow-wrap: break-word;
     width: 100%;
-    text-align: center;
     font-size: .5rem;
-    white-space: nowrap;
+    // white-space: nowrap;
 }
 
 .mix-master-number--index{
@@ -85,7 +85,11 @@
 .mix-master-section--column{
     display: flex;
     flex-direction: column;
-    margin-left: 5%;
+    padding-left: 5%;
+}
+
+.upDownButton{
+    margin: 2vh;
 }
 @media(max-width: 960px){
     .mix-master-work{
