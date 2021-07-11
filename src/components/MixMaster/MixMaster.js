@@ -1,5 +1,7 @@
 import React from "react";
+import { useState } from "react";
 import defaultImg from "./img/defaultImg.svg";
+import Carousel from "react-bootstrap/Carousel";
 import "./MixMaster.scss";
 
 const MixMaster = () => {
@@ -66,37 +68,35 @@ const MixMaster = () => {
     },
   ];
 
+  const [index, setIndex] = useState(0);
+
+  const handleSelect = (selectedIndex, e) => {
+    setIndex(selectedIndex);
+  };
+
   return (
-    <div className="mix-master-wrapper--works heightAllSections" id="works">
-      <p className="upDownButton">Arriba</p>
-      <section>
-        {theworks.map((work, index) => {
-          return (
-            <article
-              key={index + "work"}
-              id={"work" + index}
-              className="mix-master-work"
-            >
-              <iframe
-                className="mix-master-circle--img"
-                src={work.site}
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-              <section className="mix-master-section--column">
-                <section className="mix-master-text">
-                  <p className="mix-master-title--proy">{work.title}</p>
-                  <p className="mix-master-title--year">{work.year}</p>
-                </section>
-                <p className="mix-master-title--desc">{work.describe}</p>
+    <Carousel interval={5000*100} activeIndex={index} prevLabel="-" nextLabel="+" onSelect={handleSelect} id="works">
+      {theworks.map((work, index) => {
+        return (
+          <Carousel.Item className="mix-master-work" key={index}>
+            <iframe
+              className="mix-master-circle--img"
+              src={work.site}
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+            <section className="mix-master-section--column">
+              <section className="mix-master-text">
+                <p className="mix-master-title--proy">{work.title}</p>
+                <p className="mix-master-title--year">{work.year}</p>
               </section>
-            </article>
-          );
-        })}
-      </section>
-      <p className="upDownButton">abajo</p>
-    </div>
+              <p className="mix-master-title--desc">{work.describe}</p>
+            </section>
+          </Carousel.Item>
+        );
+      })}
+    </Carousel>
   );
 };
 

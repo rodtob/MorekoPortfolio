@@ -18,6 +18,7 @@
     align-items: center;
     padding: 1vh;
     margin: 1vh;
+    opacity: 0.2;
     // justify-content: center;
     // margin-bottom: 2vh;
     // min-height: 20%;
@@ -90,6 +91,43 @@
 
 .upDownButton{
     margin: 2vh;
+}
+.carousel{
+    display: flex;
+}
+.carousel-control-prev{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    width: 12vh;
+    order: 0;
+}
+
+.carousel-inner{
+    order: 1;
+}
+
+.carousel-control-next{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    width: 12vh;
+    order:2;
+}
+
+.sr-only{
+    font-size: 4rem;
+    opacity: .7;
+    transition: .4s all;
+    &:hover{
+        opacity: 1;
+    }
+}
+
+
+
+.active{
+    opacity: 1;
 }
 @media(max-width: 960px){
     .mix-master-work{
