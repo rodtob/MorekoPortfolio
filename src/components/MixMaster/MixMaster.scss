@@ -1,13 +1,16 @@
 @import '../../Theme/_variable.scss';
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
 
+
 .mix-master-wrapper--works{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    width: 90%;
-    margin-top: 4vh    
+    width: 60%;
+    margin-top: 9vh;
+    height: 80vh; 
+    overflow: auto; 
+    overflow-x: hidden; 
 }
 
 .mix-master-work{
@@ -18,10 +21,7 @@
     align-items: center;
     padding: 1vh;
     margin: 1vh;
-    opacity: 0.2;
-    // justify-content: center;
-    // margin-bottom: 2vh;
-    // min-height: 20%;
+    opacity: .6;
 }
 
 .mix-master-circle--img{
@@ -41,7 +41,6 @@
     overflow-wrap: break-word;
     width: 100%;
     font-size: .5rem;
-    // white-space: nowrap;
 }
 
 .mix-master-number--index{
@@ -92,43 +91,21 @@
 .upDownButton{
     margin: 2vh;
 }
-.carousel{
-    display: flex;
-}
-.carousel-control-prev{
-    display: flex;
-    align-self: center;
-    justify-content: center;
-    width: 12vh;
-    order: 0;
-}
 
-.carousel-inner{
-    order: 1;
-}
-
-.carousel-control-next{
-    display: flex;
-    align-self: center;
-    justify-content: center;
-    width: 12vh;
-    order:2;
-}
-
-.sr-only{
-    font-size: 4rem;
-    opacity: .7;
-    transition: .4s all;
-    &:hover{
-        opacity: 1;
-    }
-}
-
-
-
-.active{
+.central{
     opacity: 1;
 }
+
+.runner{
+    opacity: .6;
+}
+
+.others{
+    opacity: .2;
+}
+
+
+
 @media(max-width: 960px){
     .mix-master-work{
         display: flex; 
