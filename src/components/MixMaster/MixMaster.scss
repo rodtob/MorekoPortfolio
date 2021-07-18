@@ -6,23 +6,29 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-right: 7vh;
     width: 60%;
     margin-top: 9vh;
     height: 80vh; 
     overflow: auto; 
-    overflow-x: hidden; 
+    overflow-x: hidden;
 }
 
 .mix-master-work{
     border: 2px solid rgb(196, 162, 14);
-    width: 100%;
+    width: 90%;
     display: flex; 
     flex-direction: row;
     align-items: center;
     padding: 1vh;
     margin: 1vh;
-    opacity: .6;
+    opacity: .4;
+    transition: .3s all;
+    &:hover{
+        opacity: 1;
+    }
 }
+
 
 .mix-master-circle--img{
     border: 2px solid rgb(196, 162, 14);
@@ -40,7 +46,7 @@
     text-align: left;
     overflow-wrap: break-word;
     width: 100%;
-    font-size: .5rem;
+    font-size: .7rem;
 }
 
 .mix-master-number--index{
@@ -66,7 +72,8 @@
 
 .mix-master-title--year{
     color: $primary-color;
-    margin-left: 5%;
+    margin-right: 5%;
+    margin-left: auto;
     font-size: 1rem;
     font-family: 'Lato', sans-serif;
     transition: .4s all;&:hover{
@@ -79,13 +86,14 @@
     font-family: 'Roboto', sans-serif;
     text-align: left;
     margin-top: 2%;
-    font-size: .4rem;
+    font-size: .7rem;
 }
 
 .mix-master-section--column{
     display: flex;
     flex-direction: column;
     padding-left: 5%;
+    width: 100%;
 }
 
 .upDownButton{

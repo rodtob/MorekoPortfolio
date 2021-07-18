@@ -1,5 +1,6 @@
 import Menu from './Menu/Menu'
 import {Link} from "react-router-dom";
+import {useSelector} from 'react-redux'
 import Hamburguesa from './Hamburguesa/Hamburguesa'
 import styled from 'styled-components'
 import logoMoreko from './logoMoreko.png'
@@ -31,9 +32,11 @@ const DivWrapper = styled.div `
 
 
 const NavBar = ()=>{
+    const activeSite = useSelector((state) => state.activeSite);
     return(
         <DivWrapper>
             <Hamburguesa/>
+            {/* <h2>{activeSite}</h2> */}
             <Link to='/' className='wrapper--logo'>
                 <img className='logoMoreko' alt='logoMoreko' src={logoMoreko}/>
             </Link>
