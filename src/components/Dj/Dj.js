@@ -18,19 +18,11 @@ const Dj = () => {
   return (
     <DivStyled className="heightAllSections">
       <p>
-        Lorem psum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book. It has survived not only five
-        centuries, but also the leap into electronic typesetting, remaining
-        essentially unchanged. It was popularised in the 1960s with the release
-        of Letraset sheets containing Lorem Ipsum passages, and more recently
-        with desktop publishing software like Aldus PageMaker including versions
-        of Lorem Ipsum.
+        Me especializo en Deep House y Organic House. En este set realizo algunos homenajes/mashups de músicos Argentinos como el grupo Duratierra, Paco Amoroso, y Bajofondo. Grabado en estudios El Guapo en Enero de 2021, Villa Crespo, Argentina.
       </p>
       <iframe
         width="760"
-        height="300"
+        height="400"
         src="https://www.youtube.com/embed/Lj4bskGDvhc"
         title="YouTube video player"
         frameborder="0"

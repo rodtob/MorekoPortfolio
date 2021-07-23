@@ -22,7 +22,7 @@
     align-items: center;
     padding: 1vh;
     margin: 1vh;
-    opacity: .4;
+    opacity: .8;
     transition: .3s all;
     &:hover{
         opacity: 1;
@@ -33,7 +33,7 @@
 .mix-master-circle--img{
     border: 2px solid rgb(196, 162, 14);
     width: 10vh;
-    height: 10vh;
+    height: 11vh;
     transition: 1s all;
     cursor: pointer;&:hover{
         border: 2px dashed rgb(67, 112, 133);
@@ -66,7 +66,7 @@
     color: $primary-color;
     font-size: 1rem;
     transition: .4s all;&:hover{
-        opacity: .7 ;
+        opacity: 1 ;
     }
 }
 
