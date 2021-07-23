@@ -12,6 +12,12 @@ const DivStyled = styled.div`
       margin-bottom:2vh;
       font-family: 'Roboto', sans-serif;
   }
+  @media (max-width: 960px) {
+    p{
+      width:80%;
+      font-size:1rem;
+  }
+}
 `;
 
 const Dj = () => {

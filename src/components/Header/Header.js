@@ -7,7 +7,8 @@ const StyledDiv = styled.div`
     min-height: 80vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;`
+    justify-content: space-between;
+    `
 
 const StyledHeader = styled.div`
   margin-top:4vh;
@@ -40,12 +41,14 @@ const StyledH = styled.h1`
   opacity: ${({ open }) => open ? '0' : '.7'};
   transform: ${({ open }) => open ? 'translateX(120px)' : 'translateX(0)'};
   transition: all 0.3s ease-in-out;
-  // &:hover {
-  //   color: white;
-  //   letter-spacing: 2px;
-  //   text-transform: lowercase;
-  //   opacity:.4;
-  // }
+  &:hover {
+    color: white;
+    letter-spacing: 2px;
+    opacity:.4;
+  }
+  @media screen and (max-width: 800px){
+    font-size: 4rem;
+  }
 `
 
 

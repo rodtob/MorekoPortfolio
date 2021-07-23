@@ -6,11 +6,32 @@ const DivStyled = styled.div`
   align-items:center;
   width: 90%;
   justify-content: space-around;
+  .iframeVideo{
+    width:560px;
+    height:315px;
+  }
   p{
     width:90%;
     font-size: .6rem;
     margin-bottom:2vh;
     font-family: 'Roboto', sans-serif;
+}
+@media(max-width: 960px){
+  overflow: auto; 
+  overflow-x: hidden;
+  height: 94vh;
+  p{
+    margin-top:24vh;
+    margin-bottom:7vh;
+    font-size:1rem;
+  }
+  .iframeVideo{
+    width:auto;
+    height:auto;
+    margin:1vh;
+    margin-top:2vh;
+    margin-bottom:5vh;
+  }
 }
 `;
 const SectionStyled = styled.section`
@@ -18,6 +39,10 @@ const SectionStyled = styled.section`
   width: 90%;
   justify-content: space-around;
   align-items:center;
+  @media(max-width: 960px){
+    flex-direction:column;
+    
+  }
 `;
 
 const Dsonoro = () => {
@@ -28,8 +53,7 @@ const Dsonoro = () => {
       </p>
       <SectionStyled>
       <iframe
-        width="560"
-        height="315"
+        className="iframeVideo"
         src="https://www.youtube.com/embed/tPi5fRYA2eQ"
         title="YouTube video player"
         frameborder="0"
@@ -37,8 +61,7 @@ const Dsonoro = () => {
         allowfullscreen
       ></iframe>
       <iframe
-        width="560"
-        height="315"
+        className="iframeVideo"
         src="https://www.youtube.com/embed/wCiS81UHGos"
         title="YouTube video player"
         frameborder="0"
