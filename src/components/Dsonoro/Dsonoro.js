@@ -69,18 +69,16 @@ const Dsonoro = () => {
         allowfullscreen
       ></iframe>
       <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/watch?v=I4bXhjuNeH4"
+        className="iframeVideo"
+        src="https://www.youtube.com/embed/I4bXhjuNeH4"
         title="YouTube video player"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
       ></iframe>
        <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/watch?v=AhMi5TjWRBc"
+        className="iframeVideo"
+        src="https://www.youtube.com/embed/AhMi5TjWRBc"
         title="YouTube video player"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
