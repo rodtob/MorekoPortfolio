@@ -75,7 +75,7 @@
 
 @media(max-width: 960px){
   .App{
-    max-height: 100vh;
+    overflow: auto;
   }
   .aboutMeBack{
     background-size: auto 100vh;

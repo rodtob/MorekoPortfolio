@@ -36,18 +36,18 @@
     .wrapperBio {
         width: 100%;
         background-color: #0000009e;
-        overflow: auto;
-        overflow-x: hidden;
+        overflow: unset;
+        overflow-x: unset;
         display: flex;
-        min-height: 93vh;
         flex-direction: column;
     }
 
     .bioMoreko {
         font-size: 1rem;
         line-height: 2;
-        color: rgb(186, 186, 186);
+        color: rgb(208, 207, 207);
         padding-top: 2vh;
         padding-bottom: 2vh;
+        background-color: #0000009e;
     }
 }
