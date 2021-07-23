@@ -96,25 +96,13 @@
     width: 100%;
 }
 
-.upDownButton{
-    margin: 2vh;
-}
-
-.central{
-    opacity: 1;
-}
-
-.runner{
-    opacity: .6;
-}
-
-.others{
-    opacity: .2;
-}
-
-
-
 @media(max-width: 960px){
+    .mix-master-wrapper--works{
+        width: 100%;
+        padding-right: 0vh;
+        margin-top: 2vh;
+        height: 90vh;
+    }
     .mix-master-work{
         display: flex; 
         flex-direction: column;
@@ -125,6 +113,7 @@
     .mix-master-text{
         text-align: center;
         margin-top: 2vh;
+        flex-direction: column;
         font-size: 1rem;
     }
     .mix-master-wrapper--works{
@@ -133,5 +122,24 @@
     .mix-master-number--index{
         order:-1;
         align-self: center;
+    }
+    .mix-master-work{
+        opacity: 1;
+    }
+    .mix-master-section--column{
+        padding-left: 0%;
+    }
+    .mix-master-text{
+        justify-content: center;
+    }
+    .mix-master-title--year{
+        margin-left: 20px;
+    }
+    .mix-master-title--desc{
+        text-align: center;
+    }
+    .mix-master-title--proy{
+        font-size: 1.5rem;
+        margin: .4vh;
     }
 }

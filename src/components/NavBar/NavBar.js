@@ -26,6 +26,14 @@ const DivWrapper = styled.div `
     .logoMoreko:hover{
         opacity:1;  
     }
+    .titlePages{
+        font-size: .5rem;
+        opacity:0.5;
+        transition: .4s all;
+    }
+    .titlePages:hover{
+        opacity:1;
+    }
 
 
 `
@@ -33,10 +41,11 @@ const DivWrapper = styled.div `
 
 const NavBar = ()=>{
     let location = useLocation();
+    const nameLocation = location.pathname.slice(1);
     return(
         <DivWrapper>
             <Hamburguesa/>
-            <h2>{location.pathname}</h2>
+            <h2 className='titlePages'>{nameLocation}</h2>
             <Link to='/' className='wrapper--logo'>
                 <img className='logoMoreko' alt='logoMoreko' src={logoMoreko}/>
             </Link>

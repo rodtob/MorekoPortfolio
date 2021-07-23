@@ -72,3 +72,10 @@
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(230, 176, 28, 0.7);
 }
+
+@media(max-width: 960px){
+  .aboutMeBack{
+    background-size: auto 100vh;
+    background-position: 75%;
+  }
+}

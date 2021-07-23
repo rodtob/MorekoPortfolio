@@ -22,6 +22,7 @@ import {menuOpen} from '../../../actions'
 
   @media (max-width: 576px) {
       width: 100%;
+      justify-content: space-evenly;
       z-index:12;
     }
 
@@ -38,7 +39,7 @@ import {menuOpen} from '../../../actions'
 
     @media (max-width: 576px) {
       height:100vh;
-      font-size: 1.5rem;
+      font-size: 1rem;
       text-align: center;
     }
 

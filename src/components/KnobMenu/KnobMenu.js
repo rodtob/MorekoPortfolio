@@ -28,6 +28,11 @@ const StyledDiv = styled.div`
     justify-content: center;
     align-items: center;
   }
+  @media(max-width: 960px){
+    .volume{
+      display:none;
+    }
+  }
 `;
 
 const StyledSection = styled.section`
@@ -58,6 +63,13 @@ const StyledSection = styled.section`
   }
   @media screen and (max-width: 800px) {
     flex-direction: column;
+    align-items:center;
+    margin-top: 4vh;
+    .site{
+      padding: 10px 20px;
+      margin: 16px;
+      width: 35vh;
+    }
   }
 `;
 
@@ -65,6 +77,9 @@ const SectionTri = styled.section`
   width: 100%;
   height: 4vh;
   position: relative;
+  @media screen and (max-width: 800px) {
+    display:none;
+  }
 `;
 
 const Triangle = styled.p`

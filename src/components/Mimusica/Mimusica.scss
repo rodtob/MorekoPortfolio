@@ -5,6 +5,8 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    overflow: auto; 
+    overflow-x: hidden;
 }
 
 .work{
@@ -59,6 +61,11 @@
     color: $forth-color;
     font-size: .4rem;
 }
+
+.iframeSpoty{
+    width:300px;
+    height:380px
+}
 @media(max-width: 960px){
     .work{
         display: flex; 
@@ -75,9 +82,17 @@
     }
     .wrapper--works{
         min-height: 75vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
     .number--index{
         order:-1;
         align-self: center;
+    }
+    .iframeSpoty{
+        width: 90%;
+        height: 100px;
+        margin: 2vh;
     }
 }

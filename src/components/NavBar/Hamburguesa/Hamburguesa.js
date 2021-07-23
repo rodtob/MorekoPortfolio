@@ -10,7 +10,6 @@ display: flex;
 flex-direction: column;
 justify-content: space-around;
 aling-items:center;
-width: 2vw;
 height: 40%;
 margin-left: 2vw;
 background: transparent;
