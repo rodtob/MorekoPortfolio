@@ -34,6 +34,9 @@ const DivWrapper = styled.div `
     .titlePages:hover{
         opacity:1;
     }
+    @media screen and (max-width: 960px){
+        position:fixed;
+      }
 
 
 `

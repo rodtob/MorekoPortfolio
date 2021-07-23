@@ -41,6 +41,7 @@ const DivProduct = styled.div`
     border-right: 1px solid orange;
   }
   @media (max-width: 960px) {
+    margin-top: 1vh;
     .section--filter {
       flex-wrap: wrap;
       width: 90%;
@@ -130,6 +131,7 @@ const ArticleProduct = styled.article`
     color: #6f70aa;
   }
   @media (max-width: 960px) {
+    margin-bottom: 4vh;
     flex-wrap:wrap;
     .text-product {
       min-width: 0px;

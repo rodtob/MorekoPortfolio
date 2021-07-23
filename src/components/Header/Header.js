@@ -32,6 +32,9 @@ const StyledHeader = styled.div`
   .myName:hover{
     font-size:1.2rem;
   }
+  @media screen and (max-width: 960px){
+    margin-top: 1vh;
+  }
 `
 
 const StyledH = styled.h1`
@@ -46,7 +49,7 @@ const StyledH = styled.h1`
     letter-spacing: 2px;
     opacity:.4;
   }
-  @media screen and (max-width: 800px){
+  @media screen and (max-width: 960px){
     font-size: 4rem;
   }
 `

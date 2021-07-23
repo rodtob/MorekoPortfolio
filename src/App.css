@@ -77,6 +77,10 @@
   .App{
     overflow: auto;
   }
+  .main{
+    margin-top: 10vh;
+    min-height: 90vh;
+  }
   .aboutMeBack{
     background-size: auto 100vh;
     background-position: 75%;
