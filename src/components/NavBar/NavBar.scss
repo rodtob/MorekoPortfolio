@@ -1,0 +1,35 @@
+@import '../../Theme/_variable.scss';
+
+.changeLang{
+    padding: .7vh;
+    border:  $primary-color 2px solid;
+    cursor: pointer;
+    font-size: .3rem;
+    background-color:$back;
+    transition: 1s all;
+    color: $forth-color;
+    border-radius: 8px;&:hover{
+        opacity: .4;
+        border:  $forth-color 2px solid;
+    }
+}
+
+
+@media(max-width: 960px){
+
+    .changeLang{
+        padding: .7vh;
+        font-size: 1rem;
+        border:  $primary-color 2px solid;
+        cursor: pointer;
+        font-size: .6rem;
+        background-color:rgba(48, 17, 17, 0.248);
+        transition: 1s all;
+        color: $forth-color;
+        border-radius: 8px;&:hover{
+            opacity: .4;
+            border:  $forth-color 2px solid;
+        }
+    }
+    
+}

@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { rotarKnob, desRotarKnob, chooseSite } from "../../actions";
 import { useState } from "react";
 import { useEffect } from "react";
+import {useTranslation} from 'react-i18next'
 
 const StyledDiv = styled.div`
   display: flex;
@@ -103,6 +104,7 @@ const sites = [
 ];
 
 const KnobMenu = () => {
+  const[t] = useTranslation("global");
   let history = useHistory();
   const rotar = useSelector((state) => state.rotar);
   const [newSite, setNewSite] = useState(false);
@@ -143,7 +145,7 @@ const KnobMenu = () => {
                 ? "site site--selected"
                 : "site"
             }>
-            {site.name}
+            {t(`menu.${site.dir}`)}
             </Link>
           );
         })}

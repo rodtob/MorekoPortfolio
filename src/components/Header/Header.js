@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import {useSelector,useDispatch} from 'react-redux'
 import {menuOpen} from '../../actions'
 import KnobMenu from '../KnobMenu/KnobMenu'
+import {useTranslation} from 'react-i18next'
 
 const StyledDiv = styled.div`
     min-height: 80vh;
@@ -19,6 +20,7 @@ const StyledHeader = styled.div`
   .turnUp{
     margin-top:1vh;
     font-size:1.7rem;
+    text-align: center;
     transition:.3s all;
   }
   .turnUp:hover{
@@ -58,6 +60,7 @@ const StyledH = styled.h1`
 
 
 const Header = () =>{
+  const[t] = useTranslation("global");
   const open = useSelector(state=> state.isOpen)
   const dispatch = useDispatch()
   const clickClose = ()=>dispatch(menuOpen())
@@ -66,7 +69,7 @@ const Header = () =>{
         <StyledHeader>
           {/* <h4 className='myName'>hi, my name is</h4> */}
           <StyledH>MOREKO</StyledH>
-          <h3 className='turnUp'>SUBI EL VOLUMEN</h3>
+          <h3 className='turnUp'>{t("header.presentation")}</h3>
         </StyledHeader>
         <KnobMenu/>
       </StyledDiv>

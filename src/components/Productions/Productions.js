@@ -6,6 +6,7 @@ import animeTrack from "./tracks/Anime track V2.mp3";
 import upbeatTrack from "./tracks/Upbeat V2.mp3";
 import defaultImg from "./img/defaultImg.svg";
 import { useState } from "react";
+import {useTranslation} from 'react-i18next'
 
 const DivProduct = styled.div`
   display: flex;
@@ -180,6 +181,7 @@ const theProductions = [
 ];
 
 const Productions = () => {
+  const[t] = useTranslation("global");
   const genres = ["meditation", "drama--horror", "upbeat", "children"];
   const [filterItem, setFilterItem] = useState([...genres]);
 
@@ -190,31 +192,31 @@ const Productions = () => {
           className="filter--button"
           onClick={() => setFilterItem([...genres])}
         >
-          All
+          {t("productions.all")}
         </button>
         <button
           className="filter--button"
           onClick={() => setFilterItem("drama--horror")}
         >
-          horror
+            {t("productions.horror")}
         </button>
         <button
           className="filter--button"
           onClick={() => setFilterItem("upbeat")}
         >
-          Upbeat
+            {t("productions.upbeat")}
         </button>
         <button
           className="filter--button"
           onClick={() => setFilterItem("meditation")}
         >
-          Meditation
+            {t("productions.meditation")}
         </button>
         <button
           className="filter--button"
           onClick={() => setFilterItem("children")}
         >
-          Children
+            {t("productions.children")}
         </button>
       </section>
 

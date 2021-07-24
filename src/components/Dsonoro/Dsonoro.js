@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {useTranslation} from 'react-i18next'
 
 const DivStyled = styled.div`
   display: flex;

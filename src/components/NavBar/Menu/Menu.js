@@ -1,7 +1,8 @@
 import {Link} from "react-router-dom";
-import styled from 'styled-components'
-import {useSelector,useDispatch} from 'react-redux'
-import {menuOpen} from '../../../actions'
+import styled from 'styled-components';
+import {useSelector,useDispatch} from 'react-redux';
+import {menuOpen} from '../../../actions';
+import { useTranslation } from "react-i18next";
 
   const StyledMenu = styled.nav`
   z-index:12;
@@ -51,18 +52,19 @@ import {menuOpen} from '../../../actions'
 `
 
 const Menu = ()=>{
+  const[t] = useTranslation("global");
   const open = useSelector(state=> state.isOpen)
   const dispatch = useDispatch()
   const clickClose = ()=>dispatch(menuOpen())
     return(
  <StyledMenu open={open} onClick={clickClose}>
-      <li><Link to='/'>+home</Link></li>
-      <li><Link to='/mixmaster'>+mezcla/master</Link></li>
-      <li><Link to='/dj'>+dj</Link></li>
-      <li><Link to='/mymusic'>+mi musica</Link></li>
-      <li><Link to='/productions'>+producciones</Link></li>
-      <li><Link to='/sdesign'>+d.sonoro</Link></li>
-      <li><Link to='/aboutme'>+sobre mi</Link></li>  
+      <li><Link to='/'>+{t("menu.home")}</Link></li>
+      <li><Link to='/mixmaster'>+{t("menu.mixmaster")}</Link></li>
+      <li><Link to='/dj'>+{t("menu.dj")}</Link></li>
+      <li><Link to='/mymusic'>+{t("menu.mymusic")}</Link></li>
+      <li><Link to='/productions'>+{t("menu.productions")}</Link></li>
+      <li><Link to='/sdesign'>+{t("menu.sdesign")}</Link></li>
+      <li><Link to='/aboutme'>+{t("menu.aboutme")}</Link></li>  
   </StyledMenu>
     )
 }

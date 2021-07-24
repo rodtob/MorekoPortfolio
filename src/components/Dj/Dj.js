@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {useTranslation} from 'react-i18next'
 
 const DivStyled = styled.div`
   display: flex;
@@ -30,13 +31,11 @@ const DivStyled = styled.div`
 `;
 
 const Dj = () => {
+  const[t] = useTranslation("global")
   return (
     <DivStyled className="heightAllSections">
       <p>
-        Me especializo en Deep House y Organic House. En este set realizo
-        algunos homenajes/mashups de músicos Argentinos como el grupo
-        Duratierra, Paco Amoroso, y Bajofondo. Grabado en estudios El Guapo en
-        Enero de 2021, Villa Crespo, Argentina.
+      {t("aboutDj.main")}
       </p>
       <iframe
         className="djFrame"

@@ -1,0 +1,34 @@
+{
+    "header":{
+        "presentation":"turn the volume up"
+    },
+    "menu":{
+        "home":"home",
+        "mixmaster":"mix/master",
+        "dj":"dj",
+        "mymusic":"my music",
+        "productions":"productions",
+        "sdesign":"sound design",
+        "aboutme":"about me"
+        },
+    "productions":{
+        "all":"all",
+        "horror":"horror",
+        "upbeat":"upbeat",
+        "meditation":"meditation",
+        "children":"children"
+    },    
+    "aboutMe":{
+        "parOne":"here in english",
+        "parTwo":"here also in english",
+        "parThree":"here once more",
+        "parFour":"another par"
+    },
+    "aboutDj":{
+        "main":"here in english"
+    },
+    "contact":{
+    }
+
+
+}

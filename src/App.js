@@ -19,7 +19,6 @@ function App() {
   useEffect(()=>{
     const styleBackground = ()=> location.pathname === "/aboutme" ?  setBackground("aboutMeBack") : setBackground("");
     styleBackground()
-    console.log(pageBackground)
   },
   [location.pathname])
  
