@@ -21,7 +21,7 @@ import { useTranslation } from "react-i18next";
   left: 0;
   transition: transform 0.3s ease-in-out;
 
-  @media (max-width: 576px) {
+  @media (max-width: 960px) {
       width: 100%;
       justify-content: space-evenly;
       z-index:12;
@@ -35,6 +35,7 @@ import { useTranslation } from "react-i18next";
     letter-spacing: 0.5rem;
     color:#cac5de;
     opacity:1;
+    text-align:center;
     text-decoration: none;
     transition: color 0.3s linear;
 

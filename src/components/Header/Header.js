@@ -67,7 +67,6 @@ const Header = () =>{
     return(
       <StyledDiv>
         <StyledHeader>
-          {/* <h4 className='myName'>hi, my name is</h4> */}
           <StyledH>MOREKO</StyledH>
           <h3 className='turnUp'>{t("header.presentation")}</h3>
         </StyledHeader>

@@ -7,13 +7,13 @@ import styled from 'styled-components'
 import logoMoreko from './logoMoreko.png'
 import './NavBar.scss'
 import i18next from 'i18next'
-import {useTranslation} from 'react-i18next'
 
 const DivWrapper = styled.div `
     display:flex;
     flex-direction:row;
     width: 100%;
-    height:7vh;
+    height:10vh;
+    padding-top:1vh;
     justify-content: space-between;
     align-items:center;
     z-index:10;
@@ -37,8 +37,7 @@ const DivWrapper = styled.div `
     .titlePages:hover{
         opacity:1;
     }
-    @media screen and (max-width: 960
-        px){
+    @media screen and (max-width: 960px){
         position:fixed;
       }
 

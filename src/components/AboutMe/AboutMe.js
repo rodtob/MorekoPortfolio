@@ -19,7 +19,6 @@ const AboutMe = () =>{
                     {t("aboutMe.parFour")}
                 </p>
             </article>
-            {/* <img className='profileImg' alt='profileMoreko' src={profileImg}/> */}
         </section>
     )
 }
