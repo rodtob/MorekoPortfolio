@@ -8,14 +8,14 @@
         "dj":"dj",
         "mymusic":"mi musica",
         "productions":"producciones",
-        "sdesign":"d.sonido",
+        "sdesign":"diseNo sonido",
         "aboutme":"sobre mi"
     },
     "productions":{
         "all":"todas",
         "horror":"horror",
         "upbeat":"upbeat",
-        "meditation":"meditación",
+        "meditation":"meditaciOn",
         "children":"infantil"
     }, 
     "aboutMe":{
