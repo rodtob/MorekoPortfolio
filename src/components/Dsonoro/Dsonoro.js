@@ -17,8 +17,6 @@ const DivStyled = styled.div`
     font-family: 'Roboto', sans-serif;
 }
 @media(max-width: 960px){
-  overflow: auto; 
-  overflow-x: hidden;
   height: 94vh;
   p{
     margin-top:24vh;
