@@ -41,7 +41,7 @@ import { useTranslation } from "react-i18next";
 
     @media (max-width: 576px) {
       height:100vh;
-      font-size: 1rem;
+      font-size: .9rem;
       text-align: center;
     }
 
