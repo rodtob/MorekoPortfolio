@@ -1,6 +1,4 @@
 import styled from 'styled-components'
-import {useSelector,useDispatch} from 'react-redux'
-import {menuOpen} from '../../actions'
 import KnobMenu from '../KnobMenu/KnobMenu'
 import {useTranslation} from 'react-i18next'
 
@@ -61,9 +59,6 @@ const StyledH = styled.h1`
 
 const Header = () =>{
   const[t] = useTranslation("global");
-  const open = useSelector(state=> state.isOpen)
-  const dispatch = useDispatch()
-  const clickClose = ()=>dispatch(menuOpen())
     return(
       <StyledDiv>
         <StyledHeader>

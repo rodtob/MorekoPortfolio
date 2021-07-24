@@ -30,6 +30,7 @@ const Mimusica = () => {
       {theworks.map((work, index) => {
         return (
           <iframe
+            title={work.title}
             key={index}
             src={work.site}
             className="iframeSpoty"

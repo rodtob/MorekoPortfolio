@@ -122,11 +122,11 @@ const KnobMenu = () => {
 
   useEffect(() => {
     history.push("/" + activeSite);
-  }, [newSite]);
+  }, [newSite, activeSite, history]);
 
   useEffect(() => {
     history.push("/");
-  }, []);
+  }, [history]);
 
   return (
     <StyledDiv rotar={rotar}>

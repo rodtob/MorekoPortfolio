@@ -70,6 +70,7 @@ const MixMaster = () => {
             className="mix-master-work"
           >
             <iframe
+              title={work.title}
               className="mix-master-circle--img"
               src={work.site}
               frameborder="0"
