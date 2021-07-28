@@ -43,6 +43,7 @@ const DivWrapper = styled.div `
     }
     @media screen and (max-width: 960px){
         position:fixed;
+        background-color:#00000099;
         .titlePages{
             margin-left: 10vw;
             position: unset;
