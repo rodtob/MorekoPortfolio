@@ -21,8 +21,9 @@ const DivWrapper = styled.div `
         display:flex;
     }
     .logoMoreko{
-        margin-right: 2vw;
-        width: 30px;
+        margin-right: 3vw;
+        margin-left: 3vw;
+        width: 43px;
         opacity: .7;
         transition: .4s all;
     }
@@ -30,15 +31,22 @@ const DivWrapper = styled.div `
         opacity:1;  
     }
     .titlePages{
-        font-size: .5rem;
+        font-size: .7rem;
         opacity:0.5;
         transition: .4s all;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
     }
     .titlePages:hover{
         opacity:1;
     }
     @media screen and (max-width: 960px){
         position:fixed;
+        .titlePages{
+            margin-left: 10vw;
+            position: unset;
+        }
       }
 
 
@@ -63,8 +71,8 @@ const NavBar = ()=>{
         <DivWrapper>
             <Hamburguesa/>
                 {titleLocation}
-                {langbutton}
             <Link to='/' className='wrapper--logo'>
+                 {langbutton}
                 <img className='logoMoreko' alt='logoMoreko' src={logoMoreko}/>
             </Link>
             <Menu/>
