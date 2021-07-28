@@ -45,8 +45,17 @@ const DivWrapper = styled.div `
         position:fixed;
         background-color:#00000099;
         .titlePages{
-            margin-left: 10vw;
+            margin-left: 17vw;
             position: unset;
+        }
+        .wrapper--logo{
+            margin-right: 2vw;
+            width:100%;
+            justify-content: flex-end;
+        }
+        .logoMoreko{
+            margin-right: 0vw;
+            margin-left: 0vw;
         }
       }
 

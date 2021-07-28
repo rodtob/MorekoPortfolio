@@ -11,7 +11,7 @@ flex-direction: column;
 justify-content: space-around;
 aling-items:center;
 height: 40%;
-margin-left: 2vw;
+margin-left: 4vw;
 background: transparent;
 border: none;
 cursor: pointer;
