@@ -43,7 +43,7 @@ const DivWrapper = styled.div `
     }
     @media screen and (max-width: 960px){
         position:fixed;
-        background-color:#00000099;
+        background-color:#000000eb;
         .titlePages{
             margin-left: 17vw;
             position: unset;
@@ -81,10 +81,12 @@ const NavBar = ()=>{
         <DivWrapper>
             <Hamburguesa/>
                 {titleLocation}
-            <Link to='/' className='wrapper--logo'>
+            <section className='wrapper--logo'>
                  {langbutton}
-                <img className='logoMoreko' alt='logoMoreko' src={logoMoreko}/>
-            </Link>
+                 <Link to='/'>
+                    <img className='logoMoreko' alt='logoMoreko' src={logoMoreko}/>
+                 </Link>
+            </section>
             <Menu/>
         </DivWrapper>
     )

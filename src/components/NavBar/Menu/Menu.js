@@ -20,6 +20,9 @@ import { useTranslation } from "react-i18next";
   top: 0;
   left: 0;
   transition: transform 0.3s ease-in-out;
+  li{
+    text-align:center;
+  }
 
   @media (max-width: 960px) {
       width: 100%;

@@ -7,8 +7,8 @@ const DivStyled = styled.div`
   width: 90%;
   justify-content: space-around;
   .iframeVideo{
-    width:560px;
     height:315px;
+    margin:1vh;
   }
   p{
     width:90%;
@@ -17,7 +17,7 @@ const DivStyled = styled.div`
     font-family: 'Roboto', sans-serif;
 }
 @media(max-width: 960px){
-  height: 94vh;
+  height: unset;
   p{
     margin-top:24vh;
     margin-bottom:7vh;
@@ -26,7 +26,6 @@ const DivStyled = styled.div`
   .iframeVideo{
     width:auto;
     height:auto;
-    margin:1vh;
     margin-top:2vh;
     margin-bottom:5vh;
   }
@@ -35,20 +34,22 @@ const DivStyled = styled.div`
 const SectionStyled = styled.section`
   display: flex;
   width: 90%;
+  height: 80vh; 
+  overflow: auto; 
+  overflow-x: hidden;
+  flex-wrap:wrap;
   justify-content: space-around;
   align-items:center;
   @media(max-width: 960px){
-    flex-direction:column;
-    
+    overflow: unset;
+    overflow-x: unset;
+    margin-bottom:2vh;
   }
 `;
 
 const Dsonoro = () => {
   return (
     <DivStyled className="heightAllSections">
-      <p>
-        
-      </p>
       <SectionStyled>
       <iframe
         className="iframeVideo"

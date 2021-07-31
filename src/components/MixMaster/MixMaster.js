@@ -12,6 +12,7 @@ const MixMaster = () => {
       type: "mezcla",
       site: "https://open.spotify.com/embed/track/7xsmzZygbcNEmTfEAdzgwF",
       img: defaultImg,
+      from: 'spoty',
     },
     {
       title: "niÑo Perdido EP",
@@ -21,6 +22,7 @@ const MixMaster = () => {
       type: "mezcla/mastering",
       site: "https://open.spotify.com/embed/artist/0qxncsCv6Dn18p3dgR8TPd",
       img: defaultImg,
+      from: 'spoty',
     },
     {
       title: "Guapos y Guapas - Juan Grabina y Vale Tubert",
@@ -30,6 +32,7 @@ const MixMaster = () => {
       type: "mezcla/mastering",
       site: "https://www.youtube.com/embed/V8-7DOYkYzU",
       img: defaultImg,
+      from: 'you',
     },
     {
       title: "Melina Plaza EP",
@@ -39,6 +42,7 @@ const MixMaster = () => {
       type: "mezcla",
       site: "https://open.spotify.com/embed/album/0itmj7ddXJDLcTWngnUBTs",
       img: defaultImg,
+      from: 'spoty',
     },
     {
       title: "Palomita Blanca",
@@ -48,6 +52,7 @@ const MixMaster = () => {
       type: "mezcla/mastering",
       site: "https://www.youtube.com/embed/wCWBU6tsFkM",
       img: defaultImg,
+      from: 'you',
     },
     {
       title: "La Kosher Nostra",
@@ -57,6 +62,7 @@ const MixMaster = () => {
       type: "mezcla/mastering",
       site: "https://www.youtube.com/embed/tvrhpD-Al0o",
       img: defaultImg,
+      from: 'you',
     },
   ];
 
@@ -69,14 +75,16 @@ const MixMaster = () => {
             id={"work" + index}
             className="mix-master-work"
           >
-            <iframe
-              title={work.title}
-              className="mix-master-circle--img"
-              src={work.site}
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
+            <section className="mix-master-circle--img">
+              <iframe
+                title={work.title}
+                className={`${work.from}`}
+                src={work.site}
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </section>
             <section className="mix-master-section--column">
               <section className="mix-master-text">
               <p className="mix-master-title--proy">{work.title}</p>

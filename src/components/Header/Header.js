@@ -10,7 +10,7 @@ const StyledDiv = styled.div`
     `
 
 const StyledHeader = styled.div`
-  margin-top:4vh;
+  margin-top:2.5vh;
   display:flex;
   flex-direction:column;
   justify-content:space-between;
@@ -34,13 +34,16 @@ const StyledHeader = styled.div`
   }
   @media screen and (max-width: 960px){
     margin-top: 1vh;
+    .turnUp{
+      display:none;
+    }
   }
 `
 
 const StyledH = styled.h1`
   z-index:1;  
   color: #FFA200; 
-  font-size: 8rem;
+  font-size: 6.5rem;
   opacity: ${({ open }) => open ? '0' : '.7'};
   transform: ${({ open }) => open ? 'translateX(120px)' : 'translateX(0)'};
   transition: all 0.3s ease-in-out;
@@ -50,7 +53,7 @@ const StyledH = styled.h1`
     opacity:.4;
   }
   @media screen and (max-width: 960px){
-    font-size: 4rem;
+    font-size: 3.2rem;
   }
 `
 

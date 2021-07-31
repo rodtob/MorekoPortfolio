@@ -15,13 +15,14 @@
 }
 
 .mix-master-work{
+    display: flex; 
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2vh;
     border: 2px solid rgb(196, 162, 14);
     width: 90%;
-    display: flex; 
-    flex-direction: row;
-    align-items: center;
     padding: 1vh;
-    margin: 1vh;
     opacity: .8;
     transition: .3s all;
     &:hover{
@@ -32,13 +33,25 @@
 
 .mix-master-circle--img{
     border: 2px solid rgb(196, 162, 14);
-    width: 10vh;
-    height: 11vh;
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    height: 22vh;
+    align-items: center;
     transition: 1s all;
     cursor: pointer;&:hover{
         border: 2px dashed rgb(67, 112, 133);
     }
 }
+
+.you{
+    height: auto;
+}
+.spoty{
+    height: 11vh;
+}
+
 
 .mix-master-text{
     display: flex;
@@ -147,4 +160,14 @@
         width: auto;
         height: auto;
     }
+
+    .you{
+        height: auto;
+        width: 90%;
+    }
+    .spoty{
+        width: 90%;
+        height: 15vh;
+    }
+    
 }
