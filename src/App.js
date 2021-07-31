@@ -8,6 +8,7 @@ import AboutMe from './components/AboutMe/AboutMe'
 import NavBar from './components/NavBar/NavBar';
 import Dj from './components/Dj/Dj';
 import MixMaster from './components/MixMaster/MixMaster';
+import Footer from './components/Footer/Footer';
 import { useEffect, useState } from 'react';
 
 
@@ -40,7 +41,7 @@ function App() {
       </Switch>
       
       </section>
-      
+      <Footer/>
     </div>
   );
 }

@@ -7,7 +7,8 @@ const DivStyled = styled.div`
   width: 90%;
   justify-content: space-around;
   .iframeVideo{
-    height:315px;
+    height: 315px;
+    width: 50%;
     margin:1vh;
   }
   p{
@@ -17,7 +18,7 @@ const DivStyled = styled.div`
     font-family: 'Roboto', sans-serif;
 }
 @media(max-width: 960px){
-  height: unset;
+  height: 70vh;
   p{
     margin-top:24vh;
     margin-bottom:7vh;
@@ -41,8 +42,6 @@ const SectionStyled = styled.section`
   justify-content: space-around;
   align-items:center;
   @media(max-width: 960px){
-    overflow: unset;
-    overflow-x: unset;
     margin-bottom:2vh;
   }
 `;

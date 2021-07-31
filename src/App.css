@@ -16,8 +16,10 @@
   background-image: url("../src/assets/bkA.png");
   background-repeat: no-repeat;
   overflow: hidden;
-  max-height: 100vh;
+  height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
 p{
@@ -25,15 +27,15 @@ p{
 }
 
 .aboutMeBack{
-  background-image: url("../src/assets/PagWebBio.png");
-  background-size: 110vw;
+  background-image: url("../src/assets/PagWebBio.jpg");
+  background-size: 100vw;
 }
 
 .main{
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 95vh;
+  min-height: 77vh;
   width: 100%;
   background-size: 100%;
 }
@@ -84,10 +86,11 @@ p{
   }
   .main{
     margin-top: 10vh;
-    min-height: 90vh;
+    min-height: 76vh;
+    justify-content: center;
   }
   .aboutMeBack{
     background-size: auto 100vh;
-    background-position: 75%;
+    background-position: 89%;
   }
 }

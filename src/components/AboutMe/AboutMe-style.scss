@@ -20,15 +20,15 @@
     height: 100vh; 
     overflow: auto; 
     overflow-x: hidden;
-    padding-top: 3vh;
+    padding-top: 4vh;
     left: 0%;
     z-index: 2;
 }
 
 .bioMoreko {
-    font-size: .7rem;
-    padding-left: 19%;
-    padding-right: 9%;
+    font-size: .75rem;
+    padding-left: 22%;
+    padding-right: 6%;
     padding-top: 2vh;
     line-height: 1.2rem;
     font-family: Arial, Helvetica, sans-serif;
@@ -40,6 +40,7 @@
         width: 100%;
         overflow: unset;
         overflow-x: unset;
+        padding-top: 3vh;
         display: flex;
         flex-direction: column;
     }

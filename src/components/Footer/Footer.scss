@@ -1,0 +1,47 @@
+@import '../../Theme/_variable.scss';
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+
+.footer--wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 11vh;
+    z-index: auto;
+}
+
+.wrapperImgContact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .6rem;
+    margin: .4vh;
+    transition: .6s all;
+    opacity: 0.6;&:hover{
+        opacity: .8;
+    }
+}
+
+.imgFooter{
+    height: 3vh;
+    margin: 1vh;
+    transition: .6s all;
+    opacity: 0.6;&:hover{
+        opacity: 1;
+    }
+}
+
+@media(max-width: 960px){
+    .footer--wrapper{
+        height: 14vh;
+    }
+    .wrapperImgContact{
+        font-size: .5rem;
+    }
+}
+    @media(max-width: 300px){
+    .footer--wrapper{
+        flex-direction: column;
+    } 
+}
+

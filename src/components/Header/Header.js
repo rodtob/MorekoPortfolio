@@ -7,6 +7,10 @@ const StyledDiv = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    @media screen and (max-width: 960px){
+      min-height: unset;
+    }
+
     `
 
 const StyledHeader = styled.div`
