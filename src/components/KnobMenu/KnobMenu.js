@@ -24,6 +24,11 @@ const StyledDiv = styled.div`
   .volume:hover {
     filter: saturate(100%);
   }
+  .volume:active {
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+}
   .titleSection {
     display: flex;
     justify-content: center;
@@ -95,8 +100,8 @@ const Triangle = styled.p`
 
 const sites = [
   { name: "mezcla/master", dir: "mixmaster", active: [0, 14] },
-  { name: "dj", dir: "dj", active: [20, 28] },
-  { name: "mi musica", dir: "mymusic", active: [36, 46] },
+  { name: "dj", dir: "dj", active: [18, 30] },
+  { name: "mi musica", dir: "mymusic", active: [34, 46] },
   { name: "producciones", dir: "productions", active: [52, 66] },
   { name: "s.design", dir: "sdesign", active: [68, 82] },
   { name: "sobre mi", dir: "aboutme", active: [84, 96] },
@@ -107,11 +112,16 @@ const KnobMenu = () => {
   let history = useHistory();
   const rotar = useSelector((state) => state.rotar);
   const [newSite, setNewSite] = useState(false);
+  const dragImage = new Image(0,0);
+  dragImage.src =  'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
   const activeSite = useSelector((state) => state.activeSite);
   const dispatch = useDispatch();
 
   const rotarWheel = (e) => {
     e.deltaY > 0 ? dispatch(rotarKnob()) : dispatch(desRotarKnob());
+  };
+  const dragWheel = (e) => {
+    e.screenY % 6 === 0 && (e.screenY < 540 ? dispatch(rotarKnob()) : dispatch(desRotarKnob()));
   };
   const goSite = (e) => {
     e.preventDefault();
@@ -127,10 +137,14 @@ const KnobMenu = () => {
     history.push("/");
   }, [history]);
 
+  const handleOnDragStart = e => {
+    e.dataTransfer.setDragImage(dragImage, 0,0)
+  }
+
   return (
     <StyledDiv rotar={rotar}>
       <section onClick={goSite}>
-        <img className="volume" onWheel={rotarWheel} alt="knob" src={volume} />
+        <img className="volume"onDragStart={handleOnDragStart} onDrag={dragWheel} onWheel={rotarWheel} alt="knob" src={volume} />
       </section>
       <SectionTri onWheel={rotarWheel}>
         <Triangle rotar={rotar}></Triangle>
