@@ -67,7 +67,7 @@ const StyledSection = styled.section`
     border: 2px solid #fccd7c;
     color: #ffa200;
   }
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 1000px) {
     flex-direction: column;
     align-items:center;
     margin-top: 0vh;
@@ -82,7 +82,7 @@ const SectionTri = styled.section`
   width: 100%;
   height: 4vh;
   position: relative;
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 1000px) {
     display:none;
   }
 `;
