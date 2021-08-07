@@ -13,7 +13,6 @@ const DivProduct = styled.div`
   z-index: 2;
   flex-direction: column;
   width: 100%;
-  min-height: 100vh;
   margin-top: 5vh;
   align-items: center;
   padding: 1vh;
