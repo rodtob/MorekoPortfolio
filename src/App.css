@@ -87,7 +87,8 @@ p{
   .main{
     margin-top: 10vh;
     min-height: 76vh;
-    justify-content: center;
+    overflow: auto;
+    overflow-x: hidden;
   }
   .aboutMeBack{
     background-size: auto 100vh;
