@@ -82,6 +82,14 @@ const Dsonoro = () => {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
       ></iframe>
+       <iframe
+        className="iframeVideo"
+        src="https://www.youtube.com/embed/03ApjAxbC-8"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
       
       </SectionStyled>
           
