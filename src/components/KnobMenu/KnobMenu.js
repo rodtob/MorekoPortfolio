@@ -102,7 +102,7 @@ const sites = [
   { name: "mezcla/master", dir: "mixmaster", active: [0, 14] },
   { name: "dj", dir: "dj", active: [18, 30] },
   { name: "mi musica", dir: "mymusic", active: [34, 46] },
-  { name: "producciones", dir: "productions", active: [52, 66] },
+  { name: "producciones", dir: "compositions", active: [52, 66] },
   { name: "s.design", dir: "sdesign", active: [68, 82] },
   { name: "sobre mi", dir: "aboutme", active: [84, 96] },
 ];

@@ -35,7 +35,7 @@ export const chooseSite = (thePosition) => {
   }
   if (thePosition > 52 && thePosition < 66) {
     return {
-      type: "PRODUCTIONS",
+      type: "COMPOSITIONS",
     };
   }
   if (thePosition > 68 && thePosition < 82) {

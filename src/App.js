@@ -34,7 +34,7 @@ function App() {
         </Route>
         <Route exact path='/sdesign'component={Dsonoro}/>
         <Route exact path='/mymusic' component={MiMusica}/>
-        <Route exact path='/productions' component={Productions}/>
+        <Route exact path='/compositions' component={Productions}/>
         <Route exact path='/aboutme' component={AboutMe}/>
         <Route exact path='/dj' component={Dj}/>
         <Route exact path='/mixmaster' component={MixMaster}/>

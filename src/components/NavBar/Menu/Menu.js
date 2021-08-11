@@ -66,7 +66,7 @@ const Menu = ()=>{
       <li><Link to='/mixmaster'>+{t("menu.mixmaster")}</Link></li>
       <li><Link to='/dj'>+{t("menu.dj")}</Link></li>
       <li><Link to='/mymusic'>+{t("menu.mymusic")}</Link></li>
-      <li><Link to='/productions'>+{t("menu.productions")}</Link></li>
+      <li><Link to='/compositions'>+{t("menu.compositions")}</Link></li>
       <li><Link to='/sdesign'>+{t("menu.sdesign")}</Link></li>
       <li><Link to='/aboutme'>+{t("menu.aboutme")}</Link></li>  
   </StyledMenu>

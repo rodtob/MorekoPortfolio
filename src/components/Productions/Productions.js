@@ -191,31 +191,31 @@ const Productions = () => {
           className="filter--button"
           onClick={() => setFilterItem([...genres])}
         >
-          {t("productions.all")}
+          {t("compositions.all")}
         </button>
         <button
           className="filter--button"
           onClick={() => setFilterItem("drama--horror")}
         >
-            {t("productions.horror")}
+            {t("compositions.horror")}
         </button>
         <button
           className="filter--button"
           onClick={() => setFilterItem("upbeat")}
         >
-            {t("productions.upbeat")}
+            {t("compositions.upbeat")}
         </button>
         <button
           className="filter--button"
           onClick={() => setFilterItem("meditation")}
         >
-            {t("productions.meditation")}
+            {t("compositions.meditation")}
         </button>
         <button
           className="filter--button"
           onClick={() => setFilterItem("children")}
         >
-            {t("productions.children")}
+            {t("compositions.children")}
         </button>
       </section>
 

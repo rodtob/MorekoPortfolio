@@ -6,8 +6,8 @@ const activeSiteReducer = (state = '', action)=>{
             return 'mixmaster';
         case 'SDESIGN':
              return 'sdesign';
-        case 'PRODUCTIONS':
-             return 'productions';
+        case 'COMPOSITIONS':
+             return 'compositions';
         case 'MYMUSIC':
              return 'mymusic';
         case 'ABOUTME' :
