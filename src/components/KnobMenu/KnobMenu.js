@@ -121,7 +121,7 @@ const KnobMenu = () => {
     e.deltaY > 0 ? dispatch(rotarKnob()) : dispatch(desRotarKnob());
   };
   const dragWheel = (e) => {
-    e.screenY % 6 === 0 && (e.screenY < 540 ? dispatch(rotarKnob()) : dispatch(desRotarKnob()));
+    e.screenY % 6 === 0 && (e.screenY < e.view.innerHeight*0.7 ? dispatch(rotarKnob()) : dispatch(desRotarKnob()));
   };
   const goSite = (e) => {
     e.preventDefault();
