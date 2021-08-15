@@ -8,7 +8,7 @@ import { useTranslation } from "react-i18next";
   z-index:12;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items:center;
   background: rgb(15, 3, 64,0.9);
   transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
@@ -31,7 +31,7 @@ import { useTranslation } from "react-i18next";
     }
 
   a {
-    font-size: 3.2rem;
+    font-size: 2.2rem;
     text-transform: uppercase;
     padding: 1.5vh 0;
     font-weight: bold;
