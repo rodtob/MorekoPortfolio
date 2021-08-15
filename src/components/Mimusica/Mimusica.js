@@ -21,7 +21,7 @@ const Mimusica = () => {
       title: "Extraña",
       year: "2021",
       describe: "boxr",
-      site: "https://open.spotify.com/embed/album/0cHNwjuI4B8WYfO4uzVFK5",
+      site: "https://open.spotify.com/embed/track/7t0yLScVFJcLdtoO2nXylX",
     },
     {
       title: "Glosa",

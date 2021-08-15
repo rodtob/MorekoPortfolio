@@ -11,7 +11,7 @@
         "sdesign":"sound design",
         "aboutme":"about me"
         },
-    "productions":{
+    "compositions":{
         "all":"all",
         "horror":"horror",
         "upbeat":"upbeat",
@@ -26,6 +26,16 @@
     },
     "aboutDj":{
         "main":"I specialize in Deep House and Organic House. In this set I perform some tributes / mashups of Argentine musicians such as the group Duratierra, Paco Amoroso, and Bajofondo. Recorded at El Guapo studios in January 2021, Villa Crespo, Argentina."
+    },
+    "mixmaster":{
+        "describe":{
+            "mentira":"SONG - Mix",
+            "guapos":"SONG - Recording/Mix/Mastering",
+            "nino":"SINGER-SONGWRITER - Mix/Mastering",
+            "melina":"SINGER-SONGWRITER - Mix",
+            "palomita":"TANGO Y FOLKLORE ARGENTINO - Recording/Mix/Mastering",
+            "kosher":"WORLD MUSIC - Recording/Mix/Mastering"
+        }
     },
     "contact":{
     }

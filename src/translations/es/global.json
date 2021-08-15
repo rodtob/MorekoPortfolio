@@ -11,7 +11,7 @@
         "sdesign":"diseNo sonoro",
         "aboutme":"sobre mi"
     },
-    "productions":{
+    "compositions":{
         "all":"todas",
         "horror":"horror",
         "upbeat":"upbeat",
@@ -26,6 +26,16 @@
     },
     "aboutDj": {
        "main": "Me especializo en Deep House y Organic House. En este set realizo algunos homenajes/mashups de músicos Argentinos como el grupo Duratierra, Paco Amoroso, y Bajofondo. Grabado en estudios El Guapo en Enero de 2021, Villa Crespo, Argentina."
+    },
+    "mixmaster":{
+        "describe":{
+            "mentira":"CANCIÓN - Mezcla",
+            "guapos":"CANCIÓN - Grabación/Mezcla/Mastering",
+            "nino":"SINGER-SONGWRITER - Mezcla/Mastering",
+            "melina":"SINGER-SONGWRITER - Mezcla",
+            "palomita":"TANGO Y FOLKLORE ARGENTINO - Grabacion/Mezcla/Mastering",
+            "kosher":"WORLD MUSIC - Grabacion - Mezcla/Mastering"
+        }
     },
     "contact": {}
  }

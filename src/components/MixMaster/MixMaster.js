@@ -1,14 +1,16 @@
 import React from "react";
 import defaultImg from "./img/defaultImg.svg";
 import "./MixMaster.scss";
+import { useTranslation } from "react-i18next";
 
 const MixMaster = () => {
+  const[t] = useTranslation("global");
   const theworks = [
         {
       title: "La Mentira - Alerta Pachuca",
       year: "2020",
       estilo: "indie",
-      describe:"CANCIÓN - Mezcla",
+      describe:`${t("mixmaster.describe.mentira")}`,
       type: "mezcla",
       site: "https://open.spotify.com/embed/track/7xsmzZygbcNEmTfEAdzgwF",
       img: defaultImg,
@@ -17,7 +19,7 @@ const MixMaster = () => {
     {
       title: "niÑo Perdido EP",
       year: "2020",
-      describe:"SINGER-SONGWRITER - Mezcla/Mastering",
+      describe:`${t("mixmaster.describe.nino")}`,
       estilo: "singer-songwriter",
       type: "mezcla/mastering",
       site: "https://open.spotify.com/embed/artist/0qxncsCv6Dn18p3dgR8TPd",
@@ -28,7 +30,7 @@ const MixMaster = () => {
       title: "Guapos y Guapas - Juan Grabina y Vale Tubert",
       year: "2019",
       estilo: "singer-songwriter",
-      describe:"CANCIÓN - Grabación/Mezcla/Mastering",
+      describe:`${t("mixmaster.describe.guapos")}`,
       type: "mezcla/mastering",
       site: "https://www.youtube.com/embed/V8-7DOYkYzU",
       img: defaultImg,
@@ -38,7 +40,7 @@ const MixMaster = () => {
       title: "Melina Plaza EP",
       year: "2018",
       estilo: "singer-songwriter",
-      describe:"SINGER-SONGWRITER - Mezcla",
+      describe:`${t("mixmaster.describe.melina")}`,
       type: "mezcla",
       site: "https://open.spotify.com/embed/album/0itmj7ddXJDLcTWngnUBTs",
       img: defaultImg,
@@ -48,7 +50,7 @@ const MixMaster = () => {
       title: "Palomita Blanca",
       year: "2016",
       estilo: "tango/folklore",
-      describe:"TANGO Y FOLKLORE ARGENTINO - Grabacion/Mezcla/Mastering",
+      describe:`${t("mixmaster.describe.palomita")}`,
       type: "mezcla/mastering",
       site: "https://www.youtube.com/embed/wCWBU6tsFkM",
       img: defaultImg,
@@ -58,7 +60,7 @@ const MixMaster = () => {
       title: "La Kosher Nostra",
       year: "2017",
       estilo: "jewish",
-      describe: "WORLD MUSIC - Grabacion - Mezcla/Mastering",
+      describe:`${t("mixmaster.describe.kosher")}`,
       type: "mezcla/mastering",
       site: "https://www.youtube.com/embed/tvrhpD-Al0o",
       img: defaultImg,
