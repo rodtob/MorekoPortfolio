@@ -118,7 +118,7 @@ const KnobMenu = () => {
   const dispatch = useDispatch();
 
   const rotarWheel = (e) => {
-    e.deltaY > 0 ? dispatch(rotarKnob()) : dispatch(desRotarKnob());
+    e.deltaY > 0 ? dispatch(desRotarKnob()) : dispatch(rotarKnob());
   };
   const dragWheel = (e) => {
     e.screenY % 6 === 0 && (e.screenY < e.view.innerHeight*0.7 ? dispatch(rotarKnob()) : dispatch(desRotarKnob()));
