@@ -50,17 +50,17 @@ const Dsonoro = () => {
   return (
     <DivStyled className="heightAllSections">
       <SectionStyled>
-      <iframe
+      {/* <iframe
         className="iframeVideo"
         src="https://www.youtube.com/embed/zbu0jeMEekU"
         title="YouTube video player"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
-      ></iframe>
+      ></iframe> */}
       <iframe
         className="iframeVideo"
-        src="https://www.youtube.com/embed/wCiS81UHGos"
+        src="https://www.youtube.com/embed/I4bXhjuNeH4"
         title="YouTube video player"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -74,17 +74,17 @@ const Dsonoro = () => {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
       ></iframe>
-       <iframe
+      <iframe
         className="iframeVideo"
-        src="https://www.youtube.com/embed/03ApjAxbC-8"
+        src="https://www.youtube.com/embed/wCiS81UHGos"
         title="YouTube video player"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
       ></iframe>
-      <iframe
+       <iframe
         className="iframeVideo"
-        src="https://www.youtube.com/embed/I4bXhjuNeH4"
+        src="https://www.youtube.com/embed/03ApjAxbC-8"
         title="YouTube video player"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
