@@ -5,7 +5,7 @@ import fantasyTrack from "./tracks/Fantasy Option 2 V2.mp3";
 import animeTrack from "./tracks/Anime track V2.mp3";
 import upbeatTrack from "./tracks/Upbeat V2.mp3";
 import defaultImg from "./img/defaultImg.svg";
-import { useState } from "react";
+import React, { useState, createRef } from "react";
 import {useTranslation} from 'react-i18next'
 
 const DivProduct = styled.div`
@@ -93,7 +93,7 @@ const ArticleProduct = styled.article`
   width: 100%;
   border-top: 1px solid grey;
   border-bottom: 1px solid grey;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 1vh;
   align-items: center;
   .text-product {
@@ -137,52 +137,68 @@ const ArticleProduct = styled.article`
       min-width: 0px;
     }
     .audioControl{
-        margin-top:1.4vh;
+      margin-top:1.4vh;
     }
   }
 `;
-const theProductions = [
-  {
-    id: 0,
-    name: "Meditation Priestess",
-    genre: "meditation",
-    track: meditationTrack,
-    img: meditationImg,
-  },
-  {
-    id: 1,
-    name: "Anime Track",
-    genre: "drama--horror",
-    track: animeTrack,
-    img: defaultImg,
-  },
-  {
-    id: 2,
-    name: "Horror Track",
-    genre: "drama--horror",
-    track: animeTrack,
-    img: defaultImg,
-  },
-  {
-    id: 3,
-    name: "Upbeat V2",
-    genre: "upbeat",
-    track: upbeatTrack,
-    img: defaultImg,
-  },
-  {
-    id: 4,
-    name: "Fantasy",
-    genre: "drama--horror",
-    track: fantasyTrack,
-    img: defaultImg,
-  },
-];
+
+const baseProductions =  [{
+  id: 0,
+  name: "Meditation Priestess",
+  genre: "meditation",
+  track: meditationTrack,
+  img: meditationImg,
+},
+{
+  id: 1,
+  name: "Anime Track",
+  genre: "drama--horror",
+  track: animeTrack,
+  img: defaultImg,
+},
+{
+  id: 2,
+  name: "Horror Track",
+  genre: "drama--horror",
+  track: animeTrack,
+  img: defaultImg,
+},
+{
+  id: 3,
+  name: "Upbeat V2",
+  genre: "upbeat",
+  track: upbeatTrack,
+  img: defaultImg,
+},
+{
+  id: 4,
+  name: "Fantasy",
+  genre: "drama--horror",
+  track: fantasyTrack,
+  img: defaultImg,
+}]
+
 
 const Productions = () => {
+  const [theProductions, setProductions] = useState(baseProductions);
   const[t] = useTranslation("global");
   const genres = ["meditation", "drama--horror", "upbeat", "children"];
   const [filterItem, setFilterItem] = useState([...genres]);
+  const [elRefs, setElRefs] = React.useState([]);
+
+  const handlePause = (nextAudio) => {
+    elRefs.map(audio =>{
+      return audio.current !== nextAudio.current &&  audio.current?.pause();
+    })
+  }
+
+  React.useEffect(() => {
+    let filteredProductions = baseProductions.filter((element) => filterItem.includes(element.genre));
+    setProductions(filteredProductions)
+    setElRefs(elRefs => (
+      filteredProductions.map((_, i) => elRefs[i] || createRef())
+    ));
+  }, [filterItem]);
 
   return (
     <DivProduct>
@@ -221,8 +237,7 @@ const Productions = () => {
 
       <SectionProduct>
         {theProductions
-          .filter((element) => filterItem.includes(element.genre))
-          .map((production) => {
+          .map((production, i) => {
             return (
               <ArticleProduct key={production.name}>
                 <div className="img-wrapper fadeMe">
@@ -236,7 +251,7 @@ const Productions = () => {
                 <p className={`text-product ${production.genre}`}>
                   {production.genre}
                 </p>
-                <audio className='audioControl' controls>
+                <audio ref={elRefs[i]} onPlay={()=>handlePause(elRefs[i])} className='audioControl' controls>
                   <source src={production.track} type="audio/mpeg" />
                 </audio>
               </ArticleProduct>
