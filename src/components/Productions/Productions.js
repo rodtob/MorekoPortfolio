@@ -188,7 +188,7 @@ const Productions = () => {
 
   const handlePause = (nextAudio) => {
     elRefs.map(audio =>{
-      return audio.current !== nextAudio.current &&  audio.current?.pause();
+      return audio.current !== nextAudio.current && audio.current?.pause();
     })
   }
 
