@@ -4,31 +4,10 @@ import "./Mimusica.scss";
 
 const Mimusica = () => {
   const theworks = [
-    {
-      title: "Esperandote",
-      year: "2019",
-      describe: "Un gran disco",
-      estilo: "Pop",
-      site: "https://open.spotify.com/embed/track/1CEEsUrcplfYapCR8FRtW8",
-    },
-    {
-      title: "Anestesiados",
-      year: "2019",
-      describe: "boxr",
-      site: "https://open.spotify.com/embed/track/0LdQ1Mu3V4qx96xxMGfdmN",
-    },
-    {
-      title: "Extraña",
-      year: "2021",
-      describe: "boxr",
-      site: "https://open.spotify.com/embed/track/7t0yLScVFJcLdtoO2nXylX",
-    },
-    {
-      title: "Glosa",
-      year: "2020",
-      describe: "boxr",
-      site: "https://open.spotify.com/embed/track/7C1BA9hv7eD105mPaCHQpF",
-    },
+    "https://open.spotify.com/embed/track/1CEEsUrcplfYapCR8FRtW8",
+    "https://open.spotify.com/embed/track/0LdQ1Mu3V4qx96xxMGfdmN",
+    "https://open.spotify.com/embed/track/7t0yLScVFJcLdtoO2nXylX",
+    "https://open.spotify.com/embed/track/7C1BA9hv7eD105mPaCHQpF",
   ];
 
   return (
@@ -36,9 +15,8 @@ const Mimusica = () => {
       {theworks.map((work, index) => {
         return (
           <iframe
-            title={work.title}
             key={index}
-            src={work.site}
+            src={work}
             className="iframeSpoty"
             frameBorder="0"
             allowtransparency="true"

@@ -12,11 +12,13 @@
         "aboutme":"sobre mi"
     },
     "compositions":{
-        "all":"todas",
-        "horror":"horror",
+        "all":"all",
+        "films":"películas",
         "upbeat":"upbeat",
         "meditation":"meditaciOn",
-        "children":"infantil"
+        "7beatz-lofi":"7beatz lofi",
+        "podcasts-intros":"podcasts intros",
+        "various":"varios"
     }, 
     "aboutMe":{
         "parOne":"Mi nombre es Juan Moreno (Moreko), soy de Buenos Aires, Argentina y trabajo con música hace 10 años. Me recibí de productor musical y técnico de sonido en vivo en el año 2016 en el instituto CEARTEC. Desde que comencé con mis estudios en 2011 me especializo en Sonido en Vivo, realizando shows con los principales artistas y en los teatros más importantes del país. Trabajé como operador de P.A. y Monitoreo en La Usina del Arte, Café Vinilo, Santos Dumont 4040, teatro Caras y Caretas, y en los festivales internacionales de Jazz y Tango del Gobierno de la Ciudad de Buenos Aires. Actualmente trabajo con el grupo Aca Seca Trío y el show a dúo de Juan Quintero/Luis Pescetti.",

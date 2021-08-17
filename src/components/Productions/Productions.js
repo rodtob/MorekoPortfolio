@@ -4,6 +4,7 @@ import meditationImg from "./img/wp4484608-meditation-wallpapers.jpg";
 import fantasyTrack from "./tracks/Fantasy Option 2 V2.mp3";
 import animeTrack from "./tracks/Anime track V2.mp3";
 import upbeatTrack from "./tracks/Upbeat V2.mp3";
+import magicOrquestra from "./tracks/Magic Wiza - orchestral.mp3";
 import defaultImg from "./img/defaultImg.svg";
 import React, { useState, createRef } from "react";
 import {useTranslation} from 'react-i18next'
@@ -152,14 +153,14 @@ const baseProductions =  [{
 {
   id: 1,
   name: "Anime Track",
-  genre: "drama--horror",
+  genre: "films",
   track: animeTrack,
   img: defaultImg,
 },
 {
   id: 2,
   name: "Horror Track",
-  genre: "drama--horror",
+  genre: "films",
   track: animeTrack,
   img: defaultImg,
 },
@@ -173,16 +174,17 @@ const baseProductions =  [{
 {
   id: 4,
   name: "Fantasy",
-  genre: "drama--horror",
+  genre: "films",
   track: fantasyTrack,
   img: defaultImg,
-}]
+}
+]
 
 
 const Productions = () => {
   const [theProductions, setProductions] = useState(baseProductions);
   const[t] = useTranslation("global");
-  const genres = ["meditation", "drama--horror", "upbeat", "children"];
+  const genres = ["meditation", "films", "upbeat", "podcasts-intros","various","7beatz-lofi"];
   const [filterItem, setFilterItem] = useState([...genres]);
   const [elRefs, setElRefs] = React.useState([]);
 
@@ -211,9 +213,9 @@ const Productions = () => {
         </button>
         <button
           className="filter--button"
-          onClick={() => setFilterItem("drama--horror")}
+          onClick={() => setFilterItem("films")}
         >
-            {t("compositions.horror")}
+            {t("compositions.films")}
         </button>
         <button
           className="filter--button"
@@ -229,9 +231,21 @@ const Productions = () => {
         </button>
         <button
           className="filter--button"
-          onClick={() => setFilterItem("children")}
+          onClick={() => setFilterItem("podcasts-intros")}
         >
-            {t("compositions.children")}
+            {t("compositions.podcasts-intros")}
+        </button>
+        <button
+          className="filter--button"
+          onClick={() => setFilterItem("7beatz-lofi")}
+        >
+            {t("compositions.7beatz-lofi")}
+        </button>
+        <button
+          className="filter--button"
+          onClick={() => setFilterItem("various")}
+        >
+            {t("compositions.various")}
         </button>
       </section>
 
