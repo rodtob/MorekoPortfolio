@@ -15,7 +15,8 @@ const Mimusica = () => {
       {theworks.map((work, index) => {
         return (
           <iframe
-            key={index}
+            key={`mmusic${index}`}
+            title={`mmusic${index}`}
             src={work}
             className="iframeSpoty"
             frameBorder="0"

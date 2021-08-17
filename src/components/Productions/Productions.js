@@ -7,7 +7,7 @@ import upbeatTrack from "./tracks/Upbeat V2.mp3";
 import magicOrquestra from "./tracks/Magic Wiza - orchestral.mp3";
 import defaultImg from "./img/defaultImg.svg";
 import React, { useState, createRef } from "react";
-import {useTranslation} from 'react-i18next'
+import { useTranslation } from "react-i18next";
 
 const DivProduct = styled.div`
   display: flex;
@@ -51,8 +51,8 @@ const DivProduct = styled.div`
       margin-left: auto;
       margin-right: auto;
     }
-    .filter--button{
-        margin:1.5vh;
+    .filter--button {
+      margin: 1.5vh;
     }
   }
 `;
@@ -133,73 +133,89 @@ const ArticleProduct = styled.article`
   }
   @media (max-width: 960px) {
     margin-bottom: 4vh;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     .text-product {
       min-width: 0px;
     }
-    .audioControl{
-      margin-top:1.4vh;
+    .audioControl {
+      margin-top: 1.4vh;
     }
   }
 `;
 
-const baseProductions =  [{
-  id: 0,
-  name: "Meditation Priestess",
-  genre: "meditation",
-  track: meditationTrack,
-  img: meditationImg,
-},
-{
-  id: 1,
-  name: "Anime Track",
-  genre: "films",
-  track: animeTrack,
-  img: defaultImg,
-},
-{
-  id: 2,
-  name: "Horror Track",
-  genre: "films",
-  track: animeTrack,
-  img: defaultImg,
-},
-{
-  id: 3,
-  name: "Upbeat V2",
-  genre: "upbeat",
-  track: upbeatTrack,
-  img: defaultImg,
-},
-{
-  id: 4,
-  name: "Fantasy",
-  genre: "films",
-  track: fantasyTrack,
-  img: defaultImg,
-}
-]
-
+const baseProductions = [
+  {
+    id: 0,
+    name: "Meditation Priestess",
+    genre: "meditation",
+    track: meditationTrack,
+    img: meditationImg,
+  },
+  {
+    id: 1,
+    name: "Anime Track",
+    genre: "films",
+    track: animeTrack,
+    img: defaultImg,
+  },
+  {
+    id: 2,
+    name: "Horror Track",
+    genre: "films",
+    track: animeTrack,
+    img: defaultImg,
+  },
+  {
+    id: 3,
+    name: "Upbeat V2",
+    genre: "upbeat",
+    track: upbeatTrack,
+    img: defaultImg,
+  },
+  {
+    id: 4,
+    name: "Fantasy",
+    genre: "films",
+    track: fantasyTrack,
+    img: defaultImg,
+  },
+  {
+    id: 5,
+    name: "Magic Wiza - orchestral",
+    genre: "films",
+    track: magicOrquestra,
+    img: defaultImg,
+  },
+];
 
 const Productions = () => {
   const [theProductions, setProductions] = useState(baseProductions);
-  const[t] = useTranslation("global");
-  const genres = ["meditation", "films", "upbeat", "podcasts-intros","various","7beatz-lofi"];
+  const [t] = useTranslation("global");
+  const genres = [
+    "meditation",
+    "films",
+    "upbeat",
+    "podcasts-intros",
+    "various",
+    "7beatz-lofi",
+  ];
   const [filterItem, setFilterItem] = useState([...genres]);
   const [elRefs, setElRefs] = React.useState([]);
 
   const handlePause = (nextAudio) => {
-    elRefs.map(audio =>{
+    elRefs.map((audio) => {
       return audio.current !== nextAudio.current && audio.current?.pause();
-    })
-  }
+    });
+  };
 
   React.useEffect(() => {
-    let filteredProductions = baseProductions.filter((element) => filterItem.includes(element.genre));
-    setProductions(filteredProductions)
-    setElRefs(elRefs => (
+    let filteredProductions = baseProductions.filter((element) =>
+      filterItem.includes(element.genre)
+    );
+    setProductions(filteredProductions);
+    setElRefs((elRefs) =>
       filteredProductions.map((_, i) => elRefs[i] || createRef())
-    ));
+    );
   }, [filterItem]);
 
   return (
@@ -211,66 +227,42 @@ const Productions = () => {
         >
           {t("compositions.all")}
         </button>
-        <button
-          className="filter--button"
-          onClick={() => setFilterItem("films")}
-        >
-            {t("compositions.films")}
-        </button>
-        <button
-          className="filter--button"
-          onClick={() => setFilterItem("upbeat")}
-        >
-            {t("compositions.upbeat")}
-        </button>
-        <button
-          className="filter--button"
-          onClick={() => setFilterItem("meditation")}
-        >
-            {t("compositions.meditation")}
-        </button>
-        <button
-          className="filter--button"
-          onClick={() => setFilterItem("podcasts-intros")}
-        >
-            {t("compositions.podcasts-intros")}
-        </button>
-        <button
-          className="filter--button"
-          onClick={() => setFilterItem("7beatz-lofi")}
-        >
-            {t("compositions.7beatz-lofi")}
-        </button>
-        <button
-          className="filter--button"
-          onClick={() => setFilterItem("various")}
-        >
-            {t("compositions.various")}
-        </button>
+        {genres.map((genre) => {
+          return <button
+                  className="filter--button"
+                  onClick={() => setFilterItem(genre)}
+                >
+                  {t(`compositions.${genre}`)}
+                </button>;
+        })}
       </section>
 
       <SectionProduct>
-        {theProductions
-          .map((production, i) => {
-            return (
-              <ArticleProduct key={production.name}>
-                <div className="img-wrapper fadeMe">
-                  <img
-                    className="img-product"
-                    alt={production.img}
-                    src={production.img}
-                  />
-                </div>
-                <p className="text-product">{production.name}</p>
-                <p className={`text-product ${production.genre}`}>
-                  {production.genre}
-                </p>
-                <audio ref={elRefs[i]} onPlay={()=>handlePause(elRefs[i])} className='audioControl' controls>
-                  <source src={production.track} type="audio/mpeg" />
-                </audio>
-              </ArticleProduct>
-            );
-          })}
+        {theProductions.map((production, i) => {
+          return (
+            <ArticleProduct key={production.name}>
+              <div className="img-wrapper fadeMe">
+                <img
+                  className="img-product"
+                  alt={production.img}
+                  src={production.img}
+                />
+              </div>
+              <p className="text-product">{production.name}</p>
+              <p className={`text-product ${production.genre}`}>
+                {production.genre}
+              </p>
+              <audio
+                ref={elRefs[i]}
+                onPlay={() => handlePause(elRefs[i])}
+                className="audioControl"
+                controls
+              >
+                <source src={production.track} type="audio/mpeg" />
+              </audio>
+            </ArticleProduct>
+          );
+        })}
       </SectionProduct>
     </DivProduct>
   );
