@@ -102,6 +102,9 @@ const SectionProduct = styled.section`
   display: flex;
   flex-direction: column;
   background-color: rgba(0, 0, 0, 0.99);
+  height: 65vh; 
+  overflow: auto; 
+  overflow-x: hidden;
   width: 80%;
   margin: 1vh;
 `;
