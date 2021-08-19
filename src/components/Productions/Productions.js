@@ -1,11 +1,35 @@
 import styled from "styled-components";
-import meditationTrack from "./tracks/GuidedMeditationPriestessVisualizationSAMPLE.mp3";
-import meditationImg from "./img/wp4484608-meditation-wallpapers.jpg";
-import fantasyTrack from "./tracks/Fantasy Option 2 V2.mp3";
-import animeTrack from "./tracks/Anime track V2.mp3";
-import upbeatTrack from "./tracks/Upbeat V2.mp3";
-import magicOrquestra from "./tracks/Magic Wiza - orchestral.mp3";
+
+// imagenes
 import defaultImg from "./img/defaultImg.svg";
+import beatzImg from "./img/7beatz.png";
+import adImg from "./img/ad.jpg";
+import creditDonkeyImg from "./img/creditDonkeyPodcast.jpg";
+import meditationImg from "./img/meditation.jpg";
+import podcastImg from "./img/podcast.png";
+import upbeatImg from "./img/upbeat.jpg";
+import filmImg from "./img/film.jpg";
+
+// tracks 7 beatz
+import analogCandombeTrack from "./tracks/7beatz/analog-candombe.mp3";
+import candombeHopTrack from "./tracks/7beatz/candombe-hop.mp3";
+import chillFinTrack from "./tracks/7beatz/chill-fin.mp3";
+import dobleTrapTrack from "./tracks/7beatz/doble-trap.mp3";
+import downtempoTalloTrack from "./tracks/7beatz/downtempo-tallo.mp3";
+import rainyDayTrack from "./tracks/7beatz/rainy-day.mp3";
+import tingTongTrack from "./tracks/7beatz/ting-tong.mp3";
+
+// tracks advertising
+import childrenTrack from "./tracks/ad/Children Music App.mp3";
+import citySlickerTrack from "./tracks/ad/City Slicker.mp3";
+import epicTechnologyTrack from "./tracks/ad/Epic Technology.mp3";
+// import crowdTrack from "./tracks/ad/crowd.mp3";
+import socialMediaTrack from "./tracks/ad/Gaj Ad Social Media.mp3";
+import rockNestleAdTrack from "./tracks/ad/Rock Nestle Ad.mp3";
+import whistleCookingTrack from "./tracks/ad/Whistle Cooking Video.mp3";
+import whistleNestleTrack from "./tracks/ad/Whistle Nestle Ad.mp3";
+
+
 import React, { useState, createRef } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -146,45 +170,108 @@ const ArticleProduct = styled.article`
 const baseProductions = [
   {
     id: 0,
-    name: "Meditation Priestess",
-    genre: "meditation",
-    track: meditationTrack,
-    img: meditationImg,
+    name: "Analog Candombe",
+    genre: "7beatz-lofi",
+    track: analogCandombeTrack,
+    img: beatzImg,
   },
   {
     id: 1,
-    name: "Anime Track",
-    genre: "films",
-    track: animeTrack,
-    img: defaultImg,
+    name: "Candombe Hop",
+    genre: "7beatz-lofi",
+    track: candombeHopTrack,
+    img: beatzImg,
   },
   {
     id: 2,
-    name: "Horror Track",
-    genre: "films",
-    track: animeTrack,
-    img: defaultImg,
+    name: "Chill Fin",
+    genre: "7beatz-lofi",
+    track: chillFinTrack,
+    img: beatzImg,
   },
   {
     id: 3,
-    name: "Upbeat V2",
-    genre: "upbeat",
-    track: upbeatTrack,
-    img: defaultImg,
+    name: "Doble Trap",
+    genre: "7beatz-lofi",
+    track: dobleTrapTrack,
+    img: beatzImg,
   },
   {
     id: 4,
-    name: "Fantasy",
-    genre: "films",
-    track: fantasyTrack,
-    img: defaultImg,
+    name: "Downtempo Tallo",
+    genre: "7beatz-lofi",
+    track: downtempoTalloTrack,
+    img: beatzImg,
   },
   {
     id: 5,
-    name: "Magic Wiza - orchestral",
-    genre: "films",
-    track: magicOrquestra,
-    img: defaultImg,
+    name: "Rainy Day",
+    genre: "7beatz-lofi",
+    track: rainyDayTrack,
+    img: beatzImg,
+  },
+  {
+    id: 6,
+    name: "Ting Tong",
+    genre: "7beatz-lofi",
+    track: tingTongTrack,
+    img: beatzImg,
+  },
+  {
+    id: 7,
+    name: "Childen App Music",
+    genre: "advertising",
+    track: childrenTrack,
+    img: adImg,
+  },
+  {
+    id: 8,
+    name: "City Slicker - ForePlay",
+    genre: "advertising",
+    track: citySlickerTrack,
+    img: adImg,
+  },
+  // {
+  //   id: 9,
+  //   name: "Follow the Crowd - ForePlay",
+  //   genre: "advertising",
+  //   track: crowdTrack,
+  //   img: adImg,
+  // },
+  {
+    id: 10,
+    name: "Epic Technology - ForePlay",
+    genre: "advertising",
+    track: epicTechnologyTrack,
+    img: adImg,
+  },
+  {
+    id: 11,
+    name: "Gaj Ad Social Media",
+    genre: "advertising",
+    track: socialMediaTrack,
+    img: adImg,
+  },
+  {
+    id: 12,
+    name: "Rock Nestle Ad",
+    genre: "advertising",
+    track: rockNestleAdTrack,
+    img: adImg,
+  },
+  {
+    id: 13,
+    name: "Whistle Cooking Video",
+    genre: "advertising",
+    track: whistleCookingTrack,
+    img: adImg,
+  },
+  {
+    id: 14,
+    name: "Whistle Nestle Ad",
+    genre: "advertising",
+    track: whistleNestleTrack,
+    img: adImg,
   },
 ];
 
@@ -196,7 +283,7 @@ const Productions = () => {
     "films",
     "upbeat",
     "podcasts-intros",
-    "various",
+    "advertising",
     "7beatz-lofi",
   ];
   const [filterItem, setFilterItem] = useState([...genres]);
