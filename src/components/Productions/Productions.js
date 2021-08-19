@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 // imagenes
-import defaultImg from "./img/defaultImg.svg";
+// import defaultImg from "./img/defaultImg.svg";
 import beatzImg from "./img/7beatz.png";
 import adImg from "./img/ad.jpg";
 import creditDonkeyImg from "./img/creditDonkeyPodcast.jpg";

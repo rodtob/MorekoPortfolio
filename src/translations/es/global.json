@@ -13,6 +13,7 @@
     },
     "compositions":{
         "all":"all",
+        "advertising":"publicidad",
         "films":"pelIculas",
         "upbeat":"upbeat",
         "meditation":"meditaciOn",
