@@ -52,7 +52,7 @@ const StyledH = styled.h1`
   transform: ${({ open }) => open ? 'translateX(120px)' : 'translateX(0)'};
   transition: all 0.3s ease-in-out;
   &:hover {
-    color: white;
+    color: rgb(216, 216, 216);
     letter-spacing: 2px;
     opacity:.4;
   }

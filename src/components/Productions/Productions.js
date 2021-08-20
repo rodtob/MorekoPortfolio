@@ -107,6 +107,9 @@ const SectionProduct = styled.section`
   overflow-x: hidden;
   width: 80%;
   margin: 1vh;
+  @media (max-width: 960px) {
+    height:unset;
+  }
 `;
 
 const ArticleProduct = styled.article`
@@ -144,8 +147,9 @@ const ArticleProduct = styled.article`
   align-items: center;
   .text-product {
     font-size: 0.7rem;
-    min-width: 200px;
-    color: white;
+    width: 200px;
+    text-align:center;
+    color: rgb(216, 216, 216);
     letter-spacing: 1px;
     font-family: "Roboto", sans-serif;
     padding: 1vh;
@@ -164,25 +168,30 @@ const ArticleProduct = styled.article`
     opacity: 0.9;
   }
 
-  .genre {
-    color: orange;
-  }
   .meditation {
     color: #6fcdfbd2;
   }
   .upbeat {
-    color: #813772;
+    color: #96227f;
   }
   .drama--horror {
     color: #6f70aa;
+  }
+
+  .advertising{
+    color: #2459ad;
   }
   @media (max-width: 960px) {
     margin-bottom: 4vh;
     flex-wrap: wrap;
     .text-product {
-      min-width: 0px;
+      width: 150px;
+    }
+    .genre{
+      width: 100%;
     }
     .audioControl {
+      margin: auto;
       margin-top: 1.4vh;
     }
   }
@@ -427,7 +436,7 @@ const Productions = () => {
                 />
               </div>
               <p className="text-product">{production.name}</p>
-              <p className={`text-product ${production.genre}`}>
+              <p className={`text-product ${production.genre} genre`}>
                 {production.genre}
               </p>
               <audio

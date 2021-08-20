@@ -67,10 +67,10 @@ const StyledSection = styled.section`
     border: 2px solid #fccd7c;
     color: #ffa200;
   }
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1025px) {
     flex-direction: column;
     align-items:center;
-    margin-top: 0vh;
+    margin-top: 1vh;
     .site{
       padding: 10px 20px; 
       width: 35vh;

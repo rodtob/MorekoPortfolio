@@ -33,7 +33,8 @@
 
 @media(max-width: 960px){
     .footer--wrapper{
-        height: 14vh;
+        height: 18vh;
+        align-items: flex-start;
     }
     .wrapperImgContact{
         font-size: .5rem;
