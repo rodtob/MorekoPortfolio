@@ -84,6 +84,13 @@ const DivProduct = styled.div`
     background-color: rgb(220, 220, 220, 0.4);
     border-right: 1px solid orange;
   }
+  p {
+    width: 70%;
+    font-size: 0.8rem;
+    margin-bottom: 2vh;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+  }
   @media (max-width: 960px) {
     margin-top: 1vh;
     .section--filter {
@@ -415,9 +422,9 @@ const Productions = () => {
 
   return (
     <DivProduct>
-            {/* <p>
-      {t("aboutProductions.main")}
-           </p> */}
+            <p>
+      {t("productions.main")}
+           </p>
       <section className="section--filter">
         <button
           className="filter--button"
