@@ -22,7 +22,7 @@ const MixMaster = () => {
       describe:`${t("mixmaster.describe.nino")}`,
       estilo: "singer-songwriter",
       type: "mezcla/mastering",
-      site: "https://open.spotify.com/embed/artist/0qxncsCv6Dn18p3dgR8TPd",
+      site: "https://open.spotify.com/embed/album/59aUFG5NNNJpx81Pjzw8Yy?si=MdWJnGlWRs-_pn8XKvPyiQ&dl_branch=1",
       img: defaultImg,
       from: 'spoty',
     },

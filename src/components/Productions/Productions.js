@@ -28,6 +28,7 @@ import socialMediaTrack from "./tracks/ad/Gaj Ad Social Media.mp3";
 import rockNestleAdTrack from "./tracks/ad/Rock Nestle Ad.mp3";
 import whistleCookingTrack from "./tracks/ad/Whistle Cooking Video.mp3";
 import whistleNestleTrack from "./tracks/ad/Whistle Nestle Ad.mp3";
+import wizaTrack from "./tracks/ad/Wiza.mp3";
 
 // tracks films
 import animeTrack from "./tracks/films/Anime - orchestral.mp3";
@@ -248,6 +249,13 @@ const baseProductions = [
     img: beatzImg,
   },
   {
+    id: 25,
+    name: "Wiza Software Ad",
+    genre: "advertising",
+    track: wizaTrack,
+    img: adImg,
+  },
+  {
     id: 7,
     name: "Childen App Music",
     genre: "advertising",
@@ -407,6 +415,9 @@ const Productions = () => {
 
   return (
     <DivProduct>
+            {/* <p>
+      {t("aboutProductions.main")}
+           </p> */}
       <section className="section--filter">
         <button
           className="filter--button"
