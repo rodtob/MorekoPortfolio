@@ -47,6 +47,12 @@ import { useTranslation } from "react-i18next";
       font-size: .9rem;
       text-align: center;
     }
+    
+    @media (max-height: 420px) {
+      height:100vh;
+      font-size: .9rem;
+      text-align: center;
+    }
 
     &:hover {
       color: white;

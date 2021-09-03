@@ -168,5 +168,12 @@
         width: 90%;
         height: 15vh;
     }
+
+    @media (max-height: 420px) {
+        .spoty{
+            width: 100%;
+            height: 20vh;
+        }
+      }
     
 }

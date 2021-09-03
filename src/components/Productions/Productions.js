@@ -461,7 +461,7 @@ const Productions = () => {
                 ref={elRefs[i]}
                 onPlay={() => handlePause(elRefs[i])}
                 className="audioControl"
-                controls
+                controls controlsList="nodownload"
               >
                 <source src={production.track} type="audio/mpeg" />
               </audio>

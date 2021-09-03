@@ -72,8 +72,7 @@ const StyledSection = styled.section`
     align-items:center;
     margin-top: 1vh;
     .site{
-      padding: 10px 20px; 
-      width: 35vh;
+      width: 40vh;
     }
   }
 `;
