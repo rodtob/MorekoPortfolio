@@ -7,12 +7,32 @@ const MixMaster = () => {
   const[t] = useTranslation("global");
   const theworks = [
         {
+      title: "Extraña - Elena Jota",
+      year: "2021",
+      estilo: "Downtempo",
+      describe:`${t("mixmaster.describe.extraña")}`,
+      type: "mezcla/mastering",
+      site: "https://open.spotify.com/embed/track/7t0yLScVFJcLdtoO2nXylX?si=81601feead8648b7",
+      img: defaultImg,
+      from: 'spoty',
+    },
+        {
       title: "La Mentira - Alerta Pachuca",
       year: "2020",
       estilo: "indie",
       describe:`${t("mixmaster.describe.mentira")}`,
       type: "mezcla",
       site: "https://open.spotify.com/embed/track/7xsmzZygbcNEmTfEAdzgwF",
+      img: defaultImg,
+      from: 'spoty',
+    },
+        {
+      title: "Anestesiados - Moreko",
+      year: "2019",
+      estilo: "Hip Hop",
+      describe:`${t("mixmaster.describe.anestesiados")}`,
+      type: "mezcla/mastering",
+      site: "https://open.spotify.com/embed/album/7eoqHrYXaKkZNV443xJpWw?si=e6317e4fc40f4ce8",
       img: defaultImg,
       from: 'spoty',
     },
