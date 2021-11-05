@@ -48,11 +48,16 @@ const SectionStyled = styled.section`
 
 const dSonoroVideos = [
   "https://www.youtube.com/embed/ABiQD3rRfS8",
+  "https://www.youtube.com/embed/R5guZXpTOuM",
   "https://www.youtube.com/embed/I4bXhjuNeH4",
   "https://www.youtube.com/embed/wCiS81UHGos",
+  "https://www.youtube.com/embed/MUx_pueQR40",
+  "https://www.youtube.com/embed/x9liGv5GCv0",
   "https://www.youtube.com/embed/tPi5fRYA2eQ",
   "https://www.youtube.com/embed/03ApjAxbC-8",
+  "https://www.youtube.com/embed/90C9vDwvPCQ",
   "https://www.youtube.com/embed/AhMi5TjWRBc",
+  "https://www.youtube.com/embed/ppVx65hbMj8"
 ];
 
 const Dsonoro = () => {

@@ -38,6 +38,7 @@ import horrorTrack from "./tracks/films/Horror music.mp3";
 // tracks meditation
 import priestessTrack from "./tracks/meditation/Guided Meditation - Priestess Visualization SAMPLE.mp3";
 import omniTrack from "./tracks/meditation/Meditation Omni.mp3";
+import divineMotherBinaural from "./tracks/meditation/Divine Mother - Binaural Sample.mp3";
 
 // tracks podcast
 import geetaTrack from "./tracks/podcast/Intro Podcast Geeta V2.mp3";
@@ -387,6 +388,13 @@ const baseProductions = [
     genre: "upbeat",
     track: upbeatDrumsTrack,
     img: upbeatImg,
+  },
+  {
+    id: 25,
+    name: "Divine Mother Meditation - Binaural Sample",
+    genre: "meditation",
+    track: divineMotherBinaural,
+    img: meditationImg,
   },
 ];
 
