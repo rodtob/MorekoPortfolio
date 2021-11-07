@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import baseProductions from "./DBproductions";
 import React, { useState, createRef } from "react";
+import { useHistory, useLocation } from 'react-router';
 import { useTranslation } from "react-i18next";
+import queryString from 'query-string';
 
 const DivProduct = styled.div`
   display: flex;
@@ -170,11 +172,24 @@ const Productions = () => {
   const [filterItem, setFilterItem] = useState([...genres]);
   const [elRefs, setElRefs] = React.useState([]);
 
+  const history = useHistory();
+  const location = useLocation();
+
   const handlePause = (nextAudio) => {
     elRefs.map((audio) => {
       return audio.current !== nextAudio.current && audio.current?.pause();
     });
   };
+
+  const onChangeGenre=(genre)=>{
+    const params = new URLSearchParams({'genre': genre });
+    history.replace({ pathname: location.pathname, search: params.toString() });       
+  }
+
+  React.useEffect(()=>{
+    let queryParse = queryString.parse(location.search);
+    queryParse.genre && setFilterItem(queryParse.genre);
+  }, [location.search])
 
   React.useEffect(() => {
     let filteredProductions = baseProductions.filter((element) =>
@@ -201,7 +216,7 @@ const Productions = () => {
         {genres.map((genre) => {
           return <button
                   className="filter--button"
-                  onClick={() => setFilterItem(genre)}
+                  onClick={() => onChangeGenre(genre)}
                 >
                   {t(`compositions.${genre}`)}
                 </button>;
